@@ -1,0 +1,28 @@
+{
+  "name": "telecom-mission-control",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd backend && node app.js",
+    "client": "cd frontend && npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prasobhs4/telecom-mission-control.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prasobhs4/telecom-mission-control/issues"
+  },
+  "homepage": "https://github.com/prasobhs4/telecom-mission-control#readme",
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

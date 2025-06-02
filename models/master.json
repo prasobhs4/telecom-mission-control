@@ -1,0 +1,76 @@
+{
+  "carriers": [
+    {
+      "carrierName": "AT&T",
+      "email": "admin.att@carrier.com",
+      "towers": [
+        { "id": "TWR123456", "status": "ACTIVE" },
+        { "id": "TWR123457", "status": "ACTIVE" },
+        { "id": "TWR123444", "status": "ACTIVE" }
+      ],
+      "dashboard": {
+        "activeTowers": 3,
+        "totalDevices": 80000,
+        "users": 50000,
+        "securityAlerts": 1
+      },
+      "recentActivity": [
+        {
+          "timestamp": "2025-06-01 10:30:00",
+          "message": "User Policy Updated"
+        },
+        {
+          "timestamp": "2025-05-30 11:02:59",
+          "message": "TWR123456 Security resolved"
+        },
+        {
+          "timestamp": "2025-05-29 21:34:18",
+          "message": "Security Alert - TWR123456"
+        }
+      ]
+    },
+    {
+      "carrierName": "T-Mobile",
+      "email": "admin.tmobile@carrier.com",
+      "towers": [
+        { "id": "TWR892828", "status": "ACTIVE" },
+        { "id": "TWR788828", "status": "ACTIVE" }
+      ],
+      "dashboard": {
+        "activeTowers": 2,
+        "totalDevices": 40000,
+        "users": 25000,
+        "securityAlerts": 1
+      },
+      "recentActivity": [
+        {
+          "timestamp": "2025-05-27 07:55:30",
+          "message": "New Tower Registered"
+        },
+        {
+          "timestamp": "2025-05-22 18:47:03",
+          "message": "TWR892828 Security resolved"
+        },
+        {
+          "timestamp": "2025-05-22 09:10:12",
+          "message": "Security Alert - TWR892828"
+        }
+      ]
+    },
+    {
+      "carrierName": "Verizon",
+      "email": "admin.verizon@carrier.com",
+      "towers": [{ "id": "TWR123338", "status": "ACTIVE" }],
+      "dashboard": {
+        "activeTowers": 1,
+        "totalDevices": 30000,
+        "users": 15000,
+        "securityAlerts": 0
+      },
+      "recentActivity": [
+        { "timestamp": "2025-05-07 14:23:45", "message": "New Admin added" },
+        { "timestamp": "2025-05-01 08:19:07", "message": "New Admin added" }
+      ]
+    }
+  ]
+}
