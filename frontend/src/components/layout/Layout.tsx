@@ -10,8 +10,11 @@ import {
   ListItemText,
   Box,
   Button,
+  Stack,
 } from "@mui/material";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { getUserName } from "../utils/util";
 
 const drawerWidth = 240;
 
@@ -19,9 +22,15 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const location = useLocation();
   const isLoginPage = location.pathname === "/";
   const navigate = useNavigate();
+  const { user } = useSelector((state: any) => state);
+  const username = getUserName(user);
 
   const handleLogout = () => {
     navigate("/");
+  };
+
+  const handleUpgrade = () => {
+    alert("Upgrade to Premium clicked!");
   };
 
   if (isLoginPage) return <>{children}</>;
@@ -33,9 +42,18 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           <Typography variant="h6" noWrap>
             NetCONNECT
           </Typography>
-          <Button color="inherit" onClick={handleLogout}>
-            Logout
-          </Button>
+          <Stack direction="row" spacing={2} alignItems="center">
+            <Typography
+              variant="h9"
+              style={{ fontSize: "12px", padding: "10px" }}
+            >{`Hi , ${username?.toUpperCase()}`}</Typography>
+            <Button color="inherit" onClick={handleUpgrade}>
+              Upgrade to Premium
+            </Button>
+            <Button color="inherit" onClick={handleLogout}>
+              Logout
+            </Button>
+          </Stack>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -57,13 +75,12 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             "Device Discovery Input",
             "Policy Setup",
             "User Action Log",
-          ].map((text, index) => (
+          ].map((text) => (
             <ListItem
               button
               key={text}
               component={Link}
               to={`/${text.toLowerCase().replace(/\s+/g, "-")}`}
-              onClick={() => navigate("/registration")}
             >
               <ListItemText primary={text} />
             </ListItem>

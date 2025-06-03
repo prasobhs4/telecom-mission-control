@@ -1,0 +1,218 @@
+[
+  {
+    "ip": "192.168.1.101",
+    "mac": "AA-BB-CC-DD-EE-01",
+    "vendor": "Cisco",
+    "model": "AX-1000",
+    "discoveredAt": "2025-06-03 03:33:27",
+    "status": "available"
+  },
+  {
+    "ip": "192.168.1.102",
+    "mac": "AA-BB-CC-DD-EE-02",
+    "vendor": "Huawei",
+    "model": "HX-900",
+    "discoveredAt": "2025-06-03 03:33:27",
+    "status": "available"
+  },
+  {
+    "ip": "192.168.1.103",
+    "mac": "AA-BB-CC-DD-EE-03",
+    "vendor": "Nokia",
+    "model": "NX-500",
+    "discoveredAt": "2025-06-03 03:33:27",
+    "status": "available"
+  },
+  {
+    "ip": "20.57.53.127",
+    "mac": "02-D7-41-E7-EE-70",
+    "vendor": "Cisco",
+    "model": "X100",
+    "discoveredAt": "2025-06-03 04:02:30",
+    "status": "available"
+  },
+  {
+    "ip": "20.57.53.127",
+    "mac": "02-D7-41-E7-EE-70",
+    "vendor": "Cisco",
+    "model": "X100",
+    "discoveredAt": "2025-06-03 04:04:49",
+    "status": "available"
+  },
+  {
+    "ip": "20.57.53.127",
+    "mac": "02-D7-41-E7-EE-70",
+    "vendor": "Cisco",
+    "model": "X100",
+    "discoveredAt": "2025-06-03 04:05:28",
+    "status": "available"
+  },
+  {
+    "ip": "20.57.53.127",
+    "mac": "02-D7-41-E7-EE-70",
+    "vendor": "Cisco",
+    "model": "X100",
+    "discoveredAt": "2025-06-03 04:05:49",
+    "status": "available"
+  },
+  {
+    "ip": "20.57.53.127",
+    "mac": "02-D7-41-E7-EE-70",
+    "vendor": "Cisco",
+    "model": "X100",
+    "discoveredAt": "2025-06-03 04:06:32",
+    "status": "available"
+  },
+  {
+    "ip": "20.57.53.127",
+    "mac": "02-D7-41-E7-EE-70",
+    "vendor": "Cisco",
+    "model": "X100",
+    "discoveredAt": "2025-06-03 04:09:24",
+    "status": "available"
+  },
+  {
+    "ip": "20.57.53.127",
+    "mac": "02-D7-41-E7-EE-70",
+    "vendor": "Cisco",
+    "model": "X100",
+    "discoveredAt": "2025-06-03 04:12:02",
+    "status": "available"
+  },
+  {
+    "ip": "20.57.53.127",
+    "mac": "02-D7-41-E7-EE-70",
+    "vendor": "Cisco",
+    "model": "X100",
+    "discoveredAt": "2025-06-03 04:14:24",
+    "status": "available"
+  },
+  {
+    "ip": "111.196.160.190",
+    "mac": "30-3C-15-A2-53-CA",
+    "vendor": "Nokia",
+    "model": "Titan",
+    "discoveredAt": "2025-06-03 04:25:04",
+    "status": "available"
+  },
+  {
+    "ip": "113.232.242.180",
+    "mac": "2D-25-D2-AA-A4-49",
+    "vendor": "Nokia",
+    "model": "Titan",
+    "discoveredAt": "2025-06-03 04:25:12",
+    "status": "available"
+  },
+  {
+    "ip": "20.52.135.96",
+    "mac": "C1-E9-1D-04-BF-19",
+    "vendor": "Ericsson",
+    "model": "NX9000",
+    "discoveredAt": "2025-06-03 04:25:28",
+    "status": "available"
+  },
+  {
+    "ip": "113.92.126.171",
+    "mac": "B9-50-96-83-3D-46",
+    "vendor": "Huawei",
+    "model": "Raptor5",
+    "discoveredAt": "2025-06-03 04:26:14",
+    "status": "available"
+  },
+  {
+    "ip": "201.76.150.131",
+    "mac": "C4-2A-10-0D-90-B2",
+    "vendor": "Ericsson",
+    "model": "E77",
+    "discoveredAt": "2025-06-03 04:26:44",
+    "status": "available"
+  },
+  {
+    "ip": "121.150.37.64",
+    "mac": "8F-EC-7D-53-D7-05",
+    "vendor": "Juniper",
+    "model": "NX9000",
+    "discoveredAt": "2025-06-03 04:28:06",
+    "status": "available"
+  },
+  {
+    "ip": "98.54.87.140",
+    "mac": "00-D9-B1-18-39-74",
+    "vendor": "Ericsson",
+    "model": "NX9000",
+    "discoveredAt": "2025-06-03 05:38:16",
+    "status": "available"
+  },
+  {
+    "ip": "173.220.228.38",
+    "mac": "DB-20-60-3C-59-7F",
+    "vendor": "Cisco",
+    "model": "X100",
+    "discoveredAt": "2025-06-03 05:51:59",
+    "status": "available"
+  },
+  {
+    "ip": "19.188.111.62",
+    "mac": "5F-E2-E9-3A-9B-B1",
+    "vendor": "Juniper",
+    "model": "Titan",
+    "discoveredAt": "2025-06-03 06:01:09",
+    "status": "available"
+  },
+  {
+    "ip": "218.210.33.0",
+    "mac": "40-D0-3F-F6-7B-BD",
+    "vendor": "Huawei",
+    "model": "Titan",
+    "discoveredAt": "2025-06-03 06:02:24",
+    "status": "available"
+  },
+  {
+    "ip": "92.167.173.124",
+    "mac": "4B-A0-0B-AF-1E-21",
+    "vendor": "Cisco",
+    "model": "Titan",
+    "discoveredAt": "2025-06-03 06:08:13",
+    "status": "available"
+  },
+  {
+    "ip": "182.109.209.181",
+    "mac": "13-20-EA-7E-60-8F",
+    "vendor": "Cisco",
+    "model": "Raptor5",
+    "discoveredAt": "2025-06-03 06:17:28",
+    "status": "available"
+  },
+  {
+    "ip": "24.182.31.53",
+    "mac": "DF-32-92-AE-81-C6",
+    "vendor": "Juniper",
+    "model": "Titan",
+    "discoveredAt": "2025-06-03 06:17:44",
+    "status": "available"
+  },
+  {
+    "ip": "208.13.75.229",
+    "mac": "07-35-AB-01-F6-A8",
+    "vendor": "Cisco",
+    "model": "NX9000",
+    "discoveredAt": "2025-06-03 06:23:39",
+    "status": "available"
+  },
+  {
+    "ip": "0.185.74.96",
+    "mac": "B7-AE-8C-58-7D-E4",
+    "vendor": "Nokia",
+    "model": "E77",
+    "discoveredAt": "2025-06-03 06:26:30",
+    "status": "available"
+  },
+  {
+    "ip": "22.182.32.240",
+    "mac": "AB-56-2C-77-56-0A",
+    "vendor": "Nokia",
+    "model": "E77",
+    "discoveredAt": "2025-06-03 06:27:27",
+    "status": "available"
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "towerId": "TWR892828",
+    "towerName": "Tower North 892828"
+  },
+  {
+    "towerId": "TWR654321",
+    "towerName": "Tower East 654321"
+  },
+  {
+    "towerId": "TWR123456",
+    "towerName": "Tower West 123456"
+  },
+  {
+    "towerId": "TWR345678",
+    "towerName": "Tower Northeast 345678"
+  },
+  {
+    "towerId": "TWR901234",
+    "towerName": "Tower Northwest 901234"
+  },
+  {
+    "towerId": "TWR567890",
+    "towerName": "Tower Southeast 567890"
+  },
+  {
+    "towerId": "TWR234567",
+    "towerName": "Tower Southwest 234567"
+  },
+  {
+    "towerId": "TWR876543",
+    "towerName": "Tower Central 876543"
+  },
+  {
+    "towerId": "TWR111111",
+    "towerName": "Tower North 111111"
+  },
+  {
+    "towerId": "TWR222222",
+    "towerName": "Tower South 222222"
+  },
+  {
+    "towerId": "TWR333333",
+    "towerName": "Tower East 333333"
+  },
+  {
+    "towerId": "TWR444444",
+    "towerName": "Tower West 444444"
+  },
+  {
+    "towerId": "TWR555555",
+    "towerName": "Tower Central 555555"
+  },
+  {
+    "towerId": "TWR666666",
+    "towerName": "Tower Northeast 666666"
+  },
+  {
+    "towerId": "TWR777777",
+    "towerName": "Tower Northwest 777777"
+  },
+  {
+    "towerId": "TWR888888",
+    "towerName": "Tower Southeast 888888"
+  },
+  {
+    "towerId": "TWR999999",
+    "towerName": "Tower Southwest 999999"
+  },
+  {
+    "towerId": "TWR000000",
+    "towerName": "Tower Central 000000"
+  }
+]

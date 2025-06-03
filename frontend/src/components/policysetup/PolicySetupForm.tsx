@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Box,
   Typography,
@@ -10,6 +10,8 @@ import {
   Switch,
   Grid,
 } from "@mui/material";
+import { useSelector } from "react-redux";
+import axios from "axios";
 
 const POLICY_TYPES = [
   "Administrative",
@@ -27,7 +29,7 @@ const POLICY_TOGGLES = [
   "Block Jailbreak/Root Detection",
 ];
 
-const PolicySetupForm: React.FC = () => {
+const PolicySetupForm: React.FC = ({ setPolicy }: any) => {
   const [policyName, setPolicyName] = useState("");
   const [policyType, setPolicyType] = useState<string>("Device Management");
   const [toggles, setToggles] = useState<Record<string, boolean>>({
@@ -37,6 +39,11 @@ const PolicySetupForm: React.FC = () => {
     "Block Restricted Apps": false,
     "Block Jailbreak/Root Detection": false,
   });
+  const user = useSelector((state: any) => state.user);
+
+  useEffect(() => {
+    setPolicy(false);
+  }, []);
 
   const handleToggleChange = (label: string) => {
     setToggles((prev) => ({
@@ -45,14 +52,25 @@ const PolicySetupForm: React.FC = () => {
     }));
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     const payload = {
       policyName,
       policyType,
       apply: toggles,
     };
-    console.log("Saving policy:", payload);
-    // send to API here
+
+    try {
+      await axios.post("http://localhost:8000/api/policy", {
+        ...payload,
+        user: user.username || "admin",
+        carrier: user.carrier,
+      });
+      setPolicy(true);
+      alert("Policy successfully saved and applied");
+    } catch (err) {
+      console.error("Failed to save policy", err);
+      alert("Error saving policy");
+    }
   };
 
   const handleCancel = () => {

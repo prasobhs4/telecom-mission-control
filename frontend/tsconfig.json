@@ -14,7 +14,8 @@
       "types": ["react", "react-dom"],
       "strict": true,
       "allowSyntheticDefaultImports": true,
-      "esModuleInterop": true
+      "esModuleInterop": true,
+      "moduleResolution": "node",
     }
   
 }

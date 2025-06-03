@@ -4,6 +4,7 @@ import "./Login.css";
 import backgroundImage from "../../assets/login.jpg";
 import { setUser } from "../../store/user/userActions";
 import { useDispatch } from "react-redux";
+import { getCarrierDetails } from "../utils/util";
 
 const Login: React.FC<{ onLogin?: () => void }> = ({
   onLogin,
@@ -18,7 +19,12 @@ const Login: React.FC<{ onLogin?: () => void }> = ({
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (onLogin) onLogin();
-    dispatch(setUser({ username, password }));
+    const user = {
+      username,
+      password,
+      carrier: getCarrierDetails({ username, password }),
+    };
+    dispatch(setUser(user));
     navigate("/dashboard");
   };
 

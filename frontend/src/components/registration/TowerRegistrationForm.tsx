@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Box,
   TextField,
@@ -10,26 +10,47 @@ import {
   Select,
   InputLabel,
   FormControl,
+  Autocomplete,
+  Snackbar,
+  Alert,
   Grid,
   Chip,
 } from "@mui/material";
+import { useSelector } from "react-redux";
+import axios from "axios";
 
 const CARRIER_OPTIONS = ["AT&T", "Verizon", "T-Mobile"];
 const OS_OPTIONS = ["iOS", "Android", "Windows"];
 const TOWER_TYPES = ["Monopole", "Lattice", "Guyed"];
 
-const TowerRegistrationForm: React.FC = () => {
-  const [towerId, setTowerId] = useState("");
+const TowerRegistrationForm: React.FC = ({ towerList, setTowerList }: any) => {
+  const [id, setTowerId] = useState("");
+
   const [location, setLocation] = useState("");
   const [towerType, setTowerType] = useState("Monopole");
   const [installationDate, setInstallationDate] = useState("");
   const [coverageRadius, setCoverageRadius] = useState("");
   const [carriers, setCarriers] = useState<string[]>([]);
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [supportedOS, setSupportedOS] = useState<string[]>([
     "iOS",
     "Android",
     "Windows",
   ]);
+  const user = useSelector((state: any) => state.user);
+
+  useEffect(() => {
+    const fetchTowers = async () => {
+      try {
+        const response = await axios.get("http://localhost:8000/api/towers");
+        const ids = response.data.map((t: any) => t.towerId);
+        setTowerList(ids);
+      } catch (error) {
+        console.error("Failed to fetch towers", error);
+      }
+    };
+    fetchTowers();
+  }, []);
 
   const handleCarrierToggle = (carrier: string) => {
     setCarriers((prev) =>
@@ -57,7 +78,7 @@ const TowerRegistrationForm: React.FC = () => {
 
   const handleSubmit = () => {
     const formData = {
-      towerId,
+      id,
       location,
       towerType,
       installationDate,
@@ -66,7 +87,20 @@ const TowerRegistrationForm: React.FC = () => {
       supportedOS,
     };
     console.log("Submitting:", formData);
-    // POST this to an API endpoint here
+    const registerTower = async () => {
+      try {
+        await axios.post("http://localhost:8000/api/register-tower", {
+          ...formData,
+          user,
+        });
+        setSnackbarOpen(true);
+        setTowerList((prev) => prev.filter((t) => t.id !== id));
+        setTowerId("");
+      } catch (error) {
+        console.error("Failed to register tower", error);
+      }
+    };
+    registerTower();
   };
 
   return (
@@ -76,12 +110,22 @@ const TowerRegistrationForm: React.FC = () => {
       </Typography>
 
       <Grid size={8}>
-        <TextField
-          fullWidth
-          label="Tower ID"
-          variant="outlined"
-          value={towerId}
-          onChange={(e) => setTowerId(e.target.value)}
+        <Autocomplete
+          options={towerList}
+          value={id}
+          onChange={(event: any, newValue: string | null) => {
+            setTowerId(newValue || "");
+          }}
+          renderInput={(params: any) => (
+            <TextField
+              {...params}
+              fullWidth
+              label="Tower ID"
+              variant="outlined"
+              value={id}
+              onClick={(e) => setTowerId(e.target.value)}
+            />
+          )}
         />
         <Box sx={{ pt: 4 }}>
           <Grid item xs={12} sm={8}>
@@ -191,6 +235,19 @@ const TowerRegistrationForm: React.FC = () => {
           </Button>
         </Grid>
       </Grid>
+      <Snackbar
+        open={snackbarOpen}
+        autoHideDuration={3000}
+        onClose={() => setSnackbarOpen(false)}
+      >
+        <Alert
+          onClose={() => setSnackbarOpen(false)}
+          severity="success"
+          sx={{ width: "100%" }}
+        >
+          Tower Registered Successfully!
+        </Alert>
+      </Snackbar>
     </Box>
   );
 };

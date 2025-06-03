@@ -20,11 +20,17 @@ const App = () => {
   const user = useSelector((state: any) => state.user);
   const carrier = getCarrierDetails(user);
   const dispatch = useDispatch();
+  const [towerList, setTowerList] = useState([]);
+  const [simulate, setSimulate] = useState(null) as any;
+  const [policy, setPolicy] = useState(false);
 
   const fetchApi = async (carrier: string) => {
-    const response = await axios.get(`${API_BASE}/towers`, {
+    const response = await axios.get(`${API_BASE}/dashboard`, {
       params: {
         carrier,
+      },
+      headers: {
+        "Cache-Control": "no-cache",
       },
     });
     dispatch(setDashboardData(response));
@@ -32,7 +38,7 @@ const App = () => {
 
   useEffect(() => {
     if (carrier) fetchApi(carrier);
-  }, [carrier]);
+  }, [carrier, towerList, simulate, policy]);
 
   return (
     <Router>
@@ -43,10 +49,23 @@ const App = () => {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route
             path="/tower-registration-form"
-            element={<TowerRegistrationForm />}
+            element={
+              <TowerRegistrationForm
+                setTowerList={setTowerList}
+                towerList={towerList}
+              />
+            }
           />
-          <Route path="/device-discovery-input" element={<DeviceDiscovery />} />
-          <Route path="/policy-setup" element={<PolicySetupForm />} />
+          <Route
+            path="/device-discovery-input"
+            element={
+              <DeviceDiscovery simulate={simulate} setSimulate={setSimulate} />
+            }
+          />
+          <Route
+            path="/policy-setup"
+            element={<PolicySetupForm setPolicy={setPolicy} />}
+          />
           <Route path="/user-action-log" element={<UserActionLog />} />
         </Routes>
       </Layout>

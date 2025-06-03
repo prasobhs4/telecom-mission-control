@@ -86,28 +86,31 @@ const Dashboard = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {dashboard.towerStatuses.map((t) => (
-                    <tr key={t.id}>
-                      <td
-                        style={{
-                          padding: "8px 12px",
-                          borderBottom: "1px solid #eee",
-                        }}
-                      >
-                        {t.id}
-                      </td>
-                      <td
-                        style={{
-                          padding: "8px 12px",
-                          borderBottom: "1px solid #eee",
-                          color: t.status === "ACTIVE" ? "green" : "red",
-                          fontWeight: 500,
-                        }}
-                      >
-                        {t.status}
-                      </td>
-                    </tr>
-                  ))}
+                  {dashboard.towerStatuses.map((t) => {
+                    console.log(t);
+                    return (
+                      <tr key={t.id}>
+                        <td
+                          style={{
+                            padding: "8px 12px",
+                            borderBottom: "1px solid #eee",
+                          }}
+                        >
+                          {t.id}
+                        </td>
+                        <td
+                          style={{
+                            padding: "8px 12px",
+                            borderBottom: "1px solid #eee",
+                            color: t.status === "ACTIVE" ? "green" : "red",
+                            fontWeight: 500,
+                          }}
+                        >
+                          {t.status}
+                        </td>
+                      </tr>
+                    );
+                  })}
                 </tbody>
               </Box>
             </CardContent>
