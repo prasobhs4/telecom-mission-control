@@ -1,0 +1,1764 @@
+{
+  "carriers": [
+    {
+      "carrierName": "AT&T",
+      "email": "admin.att@carrier.com",
+      "towers": [
+        {
+          "id": "TWR123456",
+          "towerType": "Monopole",
+          "status": "ACTIVE",
+          "location": {
+            "latitude": 40.7128,
+            "longitude": -74.006
+          },
+          "installDate": "2025-05-15",
+          "coverageRadius": 15000,
+          "policy": {
+            "name": "write",
+            "type": "Administrative",
+            "carrier": "AT&T",
+            "settings": {
+              "Allow VPN": true,
+              "Allow Camera": false,
+              "Allow Download": false,
+              "Block Restricted Apps": true,
+              "Block Jailbreak/Root Detection": false
+            },
+            "timestamp": "2025-06-04T02:51:34.602Z"
+          }
+        },
+        {
+          "id": "TWR123457",
+          "towerType": "Monopole",
+          "status": "ACTIVE",
+          "location": {
+            "latitude": 34.0522,
+            "longitude": -118.2437
+          },
+          "installDate": "2025-05-16",
+          "coverageRadius": 15000,
+          "policy": {
+            "name": "write",
+            "type": "Administrative",
+            "carrier": "AT&T",
+            "settings": {
+              "Allow VPN": true,
+              "Allow Camera": false,
+              "Allow Download": false,
+              "Block Restricted Apps": true,
+              "Block Jailbreak/Root Detection": false
+            },
+            "timestamp": "2025-06-04T02:51:34.602Z"
+          }
+        },
+        {
+          "id": "TWR123444",
+          "towerType": "Monopole",
+          "status": "ACTIVE",
+          "location": {
+            "latitude": 41.8781,
+            "longitude": -87.6298
+          },
+          "installDate": "2025-05-17",
+          "coverageRadius": 15000,
+          "policy": {
+            "name": "write",
+            "type": "Administrative",
+            "carrier": "AT&T",
+            "settings": {
+              "Allow VPN": true,
+              "Allow Camera": false,
+              "Allow Download": false,
+              "Block Restricted Apps": true,
+              "Block Jailbreak/Root Detection": false
+            },
+            "timestamp": "2025-06-04T02:51:34.602Z"
+          }
+        },
+        {
+          "id": "TWR123555",
+          "towerType": "Lattice",
+          "status": "ACTIVE",
+          "location": {
+            "latitude": 29.7604,
+            "longitude": -95.3698
+          },
+          "installDate": "2025-05-18",
+          "coverageRadius": 20000,
+          "policy": {
+            "name": "write",
+            "type": "Administrative",
+            "carrier": "AT&T",
+            "settings": {
+              "Allow VPN": true,
+              "Allow Camera": false,
+              "Allow Download": false,
+              "Block Restricted Apps": true,
+              "Block Jailbreak/Root Detection": false
+            },
+            "timestamp": "2025-06-04T02:51:34.602Z"
+          }
+        },
+        {
+          "id": "TWR123666",
+          "towerType": "Monopole",
+          "status": "ACTIVE",
+          "location": {
+            "latitude": 37.7749,
+            "longitude": -122.4194
+          },
+          "installDate": "2025-05-19",
+          "coverageRadius": 15000,
+          "policy": {
+            "name": "write",
+            "type": "Administrative",
+            "carrier": "AT&T",
+            "settings": {
+              "Allow VPN": true,
+              "Allow Camera": false,
+              "Allow Download": false,
+              "Block Restricted Apps": true,
+              "Block Jailbreak/Root Detection": false
+            },
+            "timestamp": "2025-06-04T02:51:34.602Z"
+          }
+        },
+        {
+          "id": "TWR123777",
+          "towerType": "Guyed",
+          "status": "ACTIVE",
+          "location": {
+            "latitude": 39.7392,
+            "longitude": -104.9903
+          },
+          "installDate": "2025-05-20",
+          "coverageRadius": 25000,
+          "policy": {
+            "name": "write",
+            "type": "Administrative",
+            "carrier": "AT&T",
+            "settings": {
+              "Allow VPN": true,
+              "Allow Camera": false,
+              "Allow Download": false,
+              "Block Restricted Apps": true,
+              "Block Jailbreak/Root Detection": false
+            },
+            "timestamp": "2025-06-04T02:51:34.602Z"
+          }
+        },
+        {
+          "id": "TWR123888",
+          "towerType": "Guyed",
+          "status": "ACTIVE",
+          "location": {
+            "latitude": 43.6532,
+            "longitude": -79.3832
+          },
+          "installDate": "2025-05-21",
+          "coverageRadius": 25000,
+          "policy": {
+            "name": "write",
+            "type": "Administrative",
+            "carrier": "AT&T",
+            "settings": {
+              "Allow VPN": true,
+              "Allow Camera": false,
+              "Allow Download": false,
+              "Block Restricted Apps": true,
+              "Block Jailbreak/Root Detection": false
+            },
+            "timestamp": "2025-06-04T02:51:34.602Z"
+          }
+        },
+        {
+          "id": "TWR123999",
+          "towerType": "Monopole",
+          "status": "ACTIVE",
+          "location": {
+            "latitude": 36.1627,
+            "longitude": -86.7816
+          },
+          "installDate": "2025-05-22",
+          "coverageRadius": 15000,
+          "policy": {
+            "name": "write",
+            "type": "Administrative",
+            "carrier": "AT&T",
+            "settings": {
+              "Allow VPN": true,
+              "Allow Camera": false,
+              "Allow Download": false,
+              "Block Restricted Apps": true,
+              "Block Jailbreak/Root Detection": false
+            },
+            "timestamp": "2025-06-04T02:51:34.602Z"
+          }
+        },
+        {
+          "id": "TWR901234",
+          "location": "sdf",
+          "towerType": "Monopole",
+          "status": "ACTIVE",
+          "installationDate": "",
+          "coverageRadius": "sdf",
+          "carriers": [
+            "AT&T"
+          ],
+          "supportedOS": [
+            "iOS",
+            "Android",
+            "Windows"
+          ],
+          "policy": {
+            "name": "write",
+            "type": "Administrative",
+            "carrier": "AT&T",
+            "settings": {
+              "Allow VPN": true,
+              "Allow Camera": false,
+              "Allow Download": false,
+              "Block Restricted Apps": true,
+              "Block Jailbreak/Root Detection": false
+            },
+            "timestamp": "2025-06-04T02:51:34.602Z"
+          }
+        },
+        {
+          "id": "TWR876543",
+          "location": "fsdfs",
+          "towerType": "Monopole",
+          "status": "ACTIVE",
+          "installationDate": "2020-01-01",
+          "coverageRadius": "566",
+          "carriers": [
+            "AT&T"
+          ],
+          "supportedOS": [
+            "iOS",
+            "Android",
+            "Windows"
+          ],
+          "policy": {
+            "name": "write",
+            "type": "Administrative",
+            "carrier": "AT&T",
+            "settings": {
+              "Allow VPN": true,
+              "Allow Camera": false,
+              "Allow Download": false,
+              "Block Restricted Apps": true,
+              "Block Jailbreak/Root Detection": false
+            },
+            "timestamp": "2025-06-04T02:51:34.602Z"
+          }
+        },
+        {
+          "id": "TWR123456",
+          "location": "awdasd",
+          "towerType": "Monopole",
+          "installationDate": "2023-03-12",
+          "coverageRadius": "213",
+          "carriers": [
+            "AT&T"
+          ],
+          "supportedOS": [
+            "iOS",
+            "Android",
+            "Windows"
+          ],
+          "status": "ACTIVE",
+          "policy": {
+            "name": "write",
+            "type": "Administrative",
+            "carrier": "AT&T",
+            "settings": {
+              "Allow VPN": true,
+              "Allow Camera": false,
+              "Allow Download": false,
+              "Block Restricted Apps": true,
+              "Block Jailbreak/Root Detection": false
+            },
+            "timestamp": "2025-06-04T02:51:34.602Z"
+          }
+        },
+        {
+          "id": "TWR567890",
+          "location": "california",
+          "towerType": "Lattice",
+          "installationDate": "2025-01-01",
+          "coverageRadius": "500",
+          "carriers": [
+            "AT&T"
+          ],
+          "supportedOS": [
+            "iOS"
+          ],
+          "status": "ACTIVE",
+          "policy": {
+            "name": "write",
+            "type": "Administrative",
+            "carrier": "AT&T",
+            "settings": {
+              "Allow VPN": true,
+              "Allow Camera": false,
+              "Allow Download": false,
+              "Block Restricted Apps": true,
+              "Block Jailbreak/Root Detection": false
+            },
+            "timestamp": "2025-06-04T02:51:34.602Z"
+          }
+        },
+        {
+          "id": "TWR654321",
+          "location": "dasd",
+          "towerType": "Monopole",
+          "installationDate": "2020-01-01",
+          "coverageRadius": "500",
+          "carriers": [
+            "AT&T"
+          ],
+          "supportedOS": [
+            "iOS",
+            "Windows"
+          ],
+          "status": "ACTIVE",
+          "policy": {
+            "name": "write",
+            "type": "Administrative",
+            "carrier": "AT&T",
+            "settings": {
+              "Allow VPN": true,
+              "Allow Camera": false,
+              "Allow Download": false,
+              "Block Restricted Apps": true,
+              "Block Jailbreak/Root Detection": false
+            },
+            "timestamp": "2025-06-04T02:51:34.602Z"
+          }
+        },
+        {
+          "id": "TWR892828",
+          "location": "asd",
+          "towerType": "Lattice",
+          "installationDate": "2020-01-01",
+          "coverageRadius": "500",
+          "carriers": [
+            "AT&T"
+          ],
+          "supportedOS": [
+            "iOS",
+            "Android",
+            "Windows"
+          ],
+          "status": "ACTIVE",
+          "policy": {
+            "name": "write",
+            "type": "Administrative",
+            "carrier": "AT&T",
+            "settings": {
+              "Allow VPN": true,
+              "Allow Camera": false,
+              "Allow Download": false,
+              "Block Restricted Apps": true,
+              "Block Jailbreak/Root Detection": false
+            },
+            "timestamp": "2025-06-04T02:51:34.602Z"
+          }
+        },
+        {
+          "id": "TWR876543",
+          "location": "sdasd",
+          "towerType": "Lattice",
+          "installationDate": "2020-01-01",
+          "coverageRadius": "400",
+          "carriers": [
+            "AT&T"
+          ],
+          "supportedOS": [
+            "iOS",
+            "Windows"
+          ],
+          "status": "ACTIVE",
+          "policy": {
+            "name": "write",
+            "type": "Administrative",
+            "carrier": "AT&T",
+            "settings": {
+              "Allow VPN": true,
+              "Allow Camera": false,
+              "Allow Download": false,
+              "Block Restricted Apps": true,
+              "Block Jailbreak/Root Detection": false
+            },
+            "timestamp": "2025-06-04T02:51:34.602Z"
+          }
+        },
+        {
+          "id": "TWR567890",
+          "location": "dasd",
+          "towerType": "Lattice",
+          "installationDate": "2020-01-01",
+          "coverageRadius": "500",
+          "carriers": [
+            "AT&T"
+          ],
+          "supportedOS": [
+            "iOS",
+            "Android",
+            "Windows"
+          ],
+          "status": "ACTIVE",
+          "policy": {
+            "name": "write",
+            "type": "Administrative",
+            "carrier": "AT&T",
+            "settings": {
+              "Allow VPN": true,
+              "Allow Camera": false,
+              "Allow Download": false,
+              "Block Restricted Apps": true,
+              "Block Jailbreak/Root Detection": false
+            },
+            "timestamp": "2025-06-04T02:51:34.602Z"
+          }
+        },
+        {
+          "id": "TWR876543",
+          "location": "dasda",
+          "towerType": "Monopole",
+          "installationDate": "2020-01-01",
+          "coverageRadius": "500",
+          "carriers": [
+            "AT&T"
+          ],
+          "supportedOS": [
+            "iOS",
+            "Android",
+            "Windows"
+          ],
+          "status": "ACTIVE",
+          "policy": {
+            "name": "write",
+            "type": "Administrative",
+            "carrier": "AT&T",
+            "settings": {
+              "Allow VPN": true,
+              "Allow Camera": false,
+              "Allow Download": false,
+              "Block Restricted Apps": true,
+              "Block Jailbreak/Root Detection": false
+            },
+            "timestamp": "2025-06-04T02:51:34.602Z"
+          }
+        },
+        {
+          "id": "TWR123456",
+          "location": "california",
+          "towerType": "Lattice",
+          "installationDate": "2020-01-01",
+          "coverageRadius": "500",
+          "carriers": [
+            "AT&T"
+          ],
+          "supportedOS": [
+            "iOS"
+          ],
+          "status": "ACTIVE",
+          "policy": {
+            "name": "write",
+            "type": "Administrative",
+            "carrier": "AT&T",
+            "settings": {
+              "Allow VPN": true,
+              "Allow Camera": false,
+              "Allow Download": false,
+              "Block Restricted Apps": true,
+              "Block Jailbreak/Root Detection": false
+            },
+            "timestamp": "2025-06-04T02:51:34.602Z"
+          }
+        },
+        {
+          "id": "TWR892828",
+          "location": "Dublin",
+          "towerType": "Lattice",
+          "installationDate": "1999-10-11",
+          "coverageRadius": "15",
+          "carriers": [
+            "AT&T"
+          ],
+          "supportedOS": [
+            "iOS"
+          ],
+          "status": "ACTIVE",
+          "policy": {
+            "name": "write",
+            "type": "Administrative",
+            "carrier": "AT&T",
+            "settings": {
+              "Allow VPN": true,
+              "Allow Camera": false,
+              "Allow Download": false,
+              "Block Restricted Apps": true,
+              "Block Jailbreak/Root Detection": false
+            },
+            "timestamp": "2025-06-04T02:51:34.602Z"
+          }
+        },
+        {
+          "id": "TWR345678",
+          "location": "CALIFORNIA",
+          "towerType": "Monopole",
+          "installationDate": "2026-01-02",
+          "coverageRadius": "600",
+          "carriers": [
+            "AT&T"
+          ],
+          "supportedOS": [
+            "iOS",
+            "Android",
+            "Windows"
+          ],
+          "user": {
+            "username": "AT1234@att.com",
+            "password": "dasdasdasd",
+            "carrier": "AT&T"
+          },
+          "status": "ACTIVE",
+          "policy": {
+            "name": "write",
+            "type": "Administrative",
+            "carrier": "AT&T",
+            "settings": {
+              "Allow VPN": true,
+              "Allow Camera": false,
+              "Allow Download": false,
+              "Block Restricted Apps": true,
+              "Block Jailbreak/Root Detection": false
+            },
+            "timestamp": "2025-06-04T02:51:34.602Z"
+          }
+        },
+        {
+          "id": "TWR567890",
+          "location": "california",
+          "towerType": "Lattice",
+          "installationDate": "2026-01-01",
+          "coverageRadius": "600",
+          "carriers": [
+            "AT&T"
+          ],
+          "supportedOS": [
+            "iOS",
+            "Android"
+          ],
+          "user": {
+            "username": "at5431@att.com",
+            "password": "dasdasdasd",
+            "carrier": "AT&T"
+          },
+          "status": "ACTIVE",
+          "policy": {
+            "name": "write",
+            "type": "Administrative",
+            "carrier": "AT&T",
+            "settings": {
+              "Allow VPN": true,
+              "Allow Camera": false,
+              "Allow Download": false,
+              "Block Restricted Apps": true,
+              "Block Jailbreak/Root Detection": false
+            },
+            "timestamp": "2025-06-04T02:51:34.602Z"
+          }
+        },
+        {
+          "id": "TWR000000",
+          "location": "CALIFORNIA",
+          "towerType": "Monopole",
+          "installationDate": "2020-01-01",
+          "coverageRadius": "500",
+          "carriers": [
+            "AT&T"
+          ],
+          "supportedOS": [
+            "iOS",
+            "Android",
+            "Windows"
+          ],
+          "user": {
+            "username": "at5431@att.com",
+            "password": "dasdasdasd",
+            "carrier": "AT&T"
+          },
+          "status": "ACTIVE",
+          "policy": {
+            "name": "write",
+            "type": "Administrative",
+            "carrier": "AT&T",
+            "settings": {
+              "Allow VPN": true,
+              "Allow Camera": false,
+              "Allow Download": false,
+              "Block Restricted Apps": true,
+              "Block Jailbreak/Root Detection": false
+            },
+            "timestamp": "2025-06-04T02:51:34.602Z"
+          }
+        },
+        {
+          "id": "TWR901234",
+          "location": "california",
+          "towerType": "Guyed",
+          "installationDate": "2020-01-01",
+          "coverageRadius": "500",
+          "carriers": [
+            "AT&T"
+          ],
+          "supportedOS": [
+            "iOS",
+            "Android",
+            "Windows"
+          ],
+          "user": {
+            "username": "AT1234@verizon.com",
+            "password": "asdasdasd",
+            "carrier": "Verizon"
+          },
+          "status": "ACTIVE",
+          "policy": {
+            "name": "write",
+            "type": "Administrative",
+            "carrier": "AT&T",
+            "settings": {
+              "Allow VPN": true,
+              "Allow Camera": false,
+              "Allow Download": false,
+              "Block Restricted Apps": true,
+              "Block Jailbreak/Root Detection": false
+            },
+            "timestamp": "2025-06-04T02:51:34.602Z"
+          }
+        },
+        {
+          "id": "TWR892828",
+          "location": "california",
+          "towerType": "Lattice",
+          "installationDate": "2020-01-01",
+          "coverageRadius": "500",
+          "carriers": [
+            "AT&T"
+          ],
+          "supportedOS": [
+            "iOS",
+            "Windows"
+          ],
+          "user": {
+            "username": "athira@att.com",
+            "password": "dasdasd",
+            "carrier": "AT&T"
+          },
+          "status": "ACTIVE",
+          "policy": {
+            "name": "write",
+            "type": "Administrative",
+            "carrier": "AT&T",
+            "settings": {
+              "Allow VPN": true,
+              "Allow Camera": false,
+              "Allow Download": false,
+              "Block Restricted Apps": true,
+              "Block Jailbreak/Root Detection": false
+            },
+            "timestamp": "2025-06-04T02:51:34.602Z"
+          }
+        },
+        {
+          "id": "TWR892828",
+          "location": "new york",
+          "towerType": "Monopole",
+          "installationDate": "2020-01-01",
+          "coverageRadius": "500",
+          "carriers": [
+            "AT&T"
+          ],
+          "supportedOS": [
+            "iOS",
+            "Android",
+            "Windows"
+          ],
+          "user": {
+            "username": "asdas@admin.com",
+            "password": "dasdasd",
+            "carrier": "admin"
+          },
+          "status": "ACTIVE"
+        }
+      ],
+      "dashboard": {
+        "activeTowers": 3,
+        "totalDevices": 80029,
+        "users": 50000,
+        "securityAlerts": 5
+      },
+      "recentActivity": [
+        {
+          "timestamp": "2025-06-03 22:08:03",
+          "message": "Device 92.244.93.108 registered",
+          "by": {
+            "username": "dasdasd@att.com",
+            "password": "dasdasdad",
+            "carrier": "AT&T"
+          }
+        },
+        {
+          "timestamp": "2025-06-03 22:07:50",
+          "message": "Device 243.174.216.31 registered",
+          "by": {
+            "username": "dasdasd@att.com",
+            "password": "dasdasdad",
+            "carrier": "AT&T"
+          }
+        },
+        {
+          "timestamp": "2025-06-03 21:57:57",
+          "message": "TWR892828 Registered",
+          "by": {
+            "username": "asdas@admin.com",
+            "password": "dasdasd",
+            "carrier": "admin"
+          }
+        },
+        {
+          "timestamp": "2025-06-03 20:03:43",
+          "message": "Device 73.194.192.6 registered",
+          "by": {
+            "username": "athira@att.com",
+            "password": "dasdasdasd",
+            "carrier": "AT&T"
+          }
+        },
+        {
+          "timestamp": "6/3/2025, 7:51:34 PM",
+          "message": "Policy \"write\" applied to carrier \"AT&T\"",
+          "by": "athira@att.com"
+        },
+        {
+          "timestamp": "2025-06-03 19:44:57",
+          "message": "Device 78.114.224.48 registered",
+          "by": {
+            "username": "athira@att.com",
+            "password": "dasdasd",
+            "carrier": "AT&T"
+          }
+        },
+        {
+          "timestamp": "2025-06-03 19:44:21",
+          "message": "TWR892828 Registered",
+          "by": {
+            "username": "athira@att.com",
+            "password": "dasdasd",
+            "carrier": "AT&T"
+          }
+        },
+        {
+          "timestamp": "2025-06-03 08:00:44",
+          "message": "TWR901234 Registered",
+          "by": {
+            "username": "AT1234@verizon.com",
+            "password": "asdasdasd",
+            "carrier": "Verizon"
+          }
+        },
+        {
+          "timestamp": "2025-06-03 08:00:05",
+          "message": "Device 236.116.216.232 registered",
+          "by": {
+            "username": "AT1234@verizon.com",
+            "password": "asdasdasd",
+            "carrier": "Verizon"
+          }
+        },
+        {
+          "timestamp": "2025-06-03 06:27:27",
+          "message": "Device 22.182.32.240 registered",
+          "by": {
+            "username": "W1234@admin.com",
+            "password": "dasdasda",
+            "carrier": "admin"
+          }
+        },
+        {
+          "timestamp": "2025-06-03 06:26:30",
+          "message": "Device 0.185.74.96 registered",
+          "by": {
+            "username": "at5431@att.com",
+            "password": "dasdasdasd",
+            "carrier": "AT&T"
+          }
+        },
+        {
+          "timestamp": "2025-06-03 06:26:20",
+          "message": "TWR000000 Registered",
+          "by": {
+            "username": "at5431@att.com",
+            "password": "dasdasdasd",
+            "carrier": "AT&T"
+          }
+        },
+        {
+          "timestamp": "2025-06-03 06:23:39",
+          "message": "Device 208.13.75.229 registered",
+          "by": {
+            "username": "at5431@att.com",
+            "password": "dasdasdasd",
+            "carrier": "AT&T"
+          }
+        },
+        {
+          "timestamp": "2025-06-03 06:23:26",
+          "message": "TWR567890 Registered",
+          "by": {
+            "username": "at5431@att.com",
+            "password": "dasdasdasd",
+            "carrier": "AT&T"
+          }
+        },
+        {
+          "timestamp": "2025-06-03 06:18:56",
+          "message": "TWR345678 Registered",
+          "by": {
+            "username": "AT1234@att.com",
+            "password": "dasdasdasd",
+            "carrier": "AT&T"
+          }
+        },
+        {
+          "timestamp": "2025-06-03 06:17:44",
+          "message": "Device 24.182.31.53 registered",
+          "by": {
+            "username": "AT1234@att.com",
+            "password": "dasdasdasd",
+            "carrier": "AT&T"
+          }
+        },
+        {
+          "timestamp": "2025-06-03 06:17:28",
+          "message": "Device 182.109.209.181 registered",
+          "by": {
+            "username": "AT1234@att.com",
+            "password": "dasdasdasd",
+            "carrier": "AT&T"
+          }
+        },
+        {
+          "timestamp": "6/2/2025, 11:08:50 PM",
+          "message": "Policy \"Device Management\" applied to carrier \"AT&T\"",
+          "by": "AM123@att.com"
+        },
+        {
+          "timestamp": "2025-06-03 06:08:13",
+          "message": "Device 92.167.173.124 registered",
+          "by": {
+            "username": "AM123@att.com",
+            "password": "pojsjs",
+            "carrier": "AT&T"
+          }
+        },
+        {
+          "timestamp": "6/2/2025, 11:06:44 PM",
+          "message": "Policy \"UPDATE\" applied to carrier \"AT&T\"",
+          "by": "at1234@att.com"
+        },
+        {
+          "timestamp": "2025-06-03 06:02:24",
+          "message": "Device 218.210.33.0 registered",
+          "by": {
+            "username": "T1234@att.com",
+            "password": "dasdasd",
+            "carrier": "AT&T"
+          }
+        },
+        {
+          "timestamp": "6/2/2025, 11:01:48 PM",
+          "message": "Policy \"write\" applied to carrier \"AT&T\"",
+          "by": "T1234@att.com"
+        },
+        {
+          "timestamp": "2025-06-03 06:01:09",
+          "message": "Device 19.188.111.62 registered",
+          "by": {
+            "username": "T1234@att.com",
+            "password": "dasdasd",
+            "carrier": "AT&T"
+          }
+        },
+        {
+          "timestamp": "2025-06-03 05:51:59",
+          "message": "Device 173.220.228.38 registered",
+          "by": {
+            "username": "AT1234@att.com",
+            "password": "12345",
+            "carrier": "AT&T"
+          }
+        },
+        {
+          "timestamp": "2025-06-03 05:38:16",
+          "message": "Device 98.54.87.140 registered"
+        },
+        {
+          "timestamp": "6/2/2025, 10:37:25 PM",
+          "message": "Policy \"ja\" applied to carrier \"AT&T\""
+        },
+        {
+          "timestamp": "6/2/2025, 10:37:15 PM",
+          "message": "Policy \"fa\" applied to carrier \"AT&T\""
+        },
+        {
+          "timestamp": "6/2/2025, 10:35:22 PM",
+          "message": "Policy \"das\" applied to carrier \"AT&T\""
+        },
+        {
+          "timestamp": "6/2/2025, 10:35:06 PM",
+          "message": "Policy \"da\" applied to carrier \"AT&T\""
+        },
+        {
+          "timestamp": "6/2/2025, 10:28:04 PM",
+          "message": "Policy \"re\" applied to carrier \"AT&T\""
+        },
+        {
+          "timestamp": "2025-06-03 04:28:06",
+          "message": "Device 121.150.37.64 registered"
+        },
+        {
+          "timestamp": "2025-06-03 04:26:44",
+          "message": "Device 201.76.150.131 registered"
+        },
+        {
+          "timestamp": "2025-06-03 04:26:14",
+          "message": "Device 113.92.126.171 registered"
+        },
+        {
+          "timestamp": "2025-06-03 04:25:28",
+          "message": "Device 20.52.135.96 registered"
+        },
+        {
+          "timestamp": "2025-06-03 04:25:12",
+          "message": "Device 113.232.242.180 registered"
+        },
+        {
+          "timestamp": "2025-06-03 04:25:04",
+          "message": "Device 111.196.160.190 registered"
+        },
+        {
+          "timestamp": "2025-06-03 04:14:24",
+          "message": "Device 20.57.53.127 registered"
+        },
+        {
+          "timestamp": "2025-06-03 04:14:05",
+          "message": "TWR892828 Registered"
+        },
+        {
+          "timestamp": "2025-06-03 04:12:02",
+          "message": "Device 20.57.53.127 registered"
+        },
+        {
+          "timestamp": "2025-06-03 04:09:24",
+          "message": "Device 20.57.53.127 registered"
+        },
+        {
+          "timestamp": "2025-06-03 04:06:32",
+          "message": "Device 20.57.53.127 registered"
+        },
+        {
+          "timestamp": "2025-06-03 04:05:49",
+          "message": "Device 20.57.53.127 registered"
+        },
+        {
+          "timestamp": "2025-06-03 04:05:28",
+          "message": "Device 20.57.53.127 registered"
+        },
+        {
+          "timestamp": "2025-06-03 04:04:49",
+          "message": "Device 20.57.53.127 registered"
+        },
+        {
+          "timestamp": "2025-06-03 04:02:30",
+          "message": "Device 20.57.53.127 registered"
+        },
+        {
+          "timestamp": "2025-06-03 03:27:07",
+          "message": "TWR123456 Registered"
+        },
+        {
+          "timestamp": "2025-06-01 10:30:00",
+          "message": "User Policy Updated"
+        },
+        {
+          "timestamp": "2025-05-30 11:02:59",
+          "message": "TWR123456 Security resolved"
+        },
+        {
+          "timestamp": "2025-05-29 21:34:18",
+          "message": "Security Alert - TWR123456"
+        },
+        {
+          "timestamp": "2025-05-29 20:45:12",
+          "message": "TWR789012 Maintenance completed"
+        },
+        {
+          "timestamp": "2025-05-29 19:15:45",
+          "message": "New policy applied to TWR654321"
+        },
+        {
+          "timestamp": "2025-05-29 18:30:00",
+          "message": "System health check passed"
+        },
+        {
+          "timestamp": "2025-05-29 17:45:23",
+          "message": "TWR345678 status updated"
+        },
+        {
+          "timestamp": "2025-05-29 16:50:15",
+          "message": "User authentication failed - TWR901234"
+        },
+        {
+          "timestamp": "2025-05-29 15:35:42",
+          "message": "Backup completed successfully"
+        },
+        {
+          "timestamp": "2025-05-29 14:20:01",
+          "message": "TWR567890 configuration updated"
+        },
+        {
+          "timestamp": "2025-05-29 13:45:00",
+          "message": "Security scan initiated"
+        },
+        {
+          "timestamp": "2025-05-29 12:30:45",
+          "message": "TWR234567 maintenance scheduled"
+        },
+        {
+          "timestamp": "2025-05-29 11:15:30",
+          "message": "System update applied"
+        },
+        {
+          "timestamp": "2025-05-29 10:00:15",
+          "message": "TWR876543 status check passed"
+        },
+        {
+          "timestamp": "2025-05-28 23:45:00",
+          "message": "Nightly backup started"
+        },
+        {
+          "timestamp": "2025-05-28 22:30:45",
+          "message": "TWR111111 configuration verified"
+        },
+        {
+          "timestamp": "2025-05-28 21:15:30",
+          "message": "Security audit completed"
+        },
+        {
+          "timestamp": "2025-05-28 20:00:15",
+          "message": "TWR222222 maintenance completed"
+        },
+        {
+          "timestamp": "2025-05-28 18:45:00",
+          "message": "System performance optimized"
+        },
+        {
+          "timestamp": "2025-05-28 17:30:45",
+          "message": "TWR333333 status updated"
+        }
+      ],
+      "policy": {
+        "name": "write",
+        "type": "Administrative",
+        "carrier": "AT&T",
+        "settings": {
+          "Allow VPN": true,
+          "Allow Camera": false,
+          "Allow Download": false,
+          "Block Restricted Apps": true,
+          "Block Jailbreak/Root Detection": false
+        },
+        "timestamp": "2025-06-04T02:51:34.602Z"
+      }
+    },
+    {
+      "carrierName": "T-Mobile",
+      "email": "admin.tmobile@carrier.com",
+      "towers": [
+        {
+          "id": "TWR892828",
+          "status": "ACTIVE",
+          "towerType": "Monopole",
+          "location": {
+            "latitude": 35.2271,
+            "longitude": -80.8431
+          },
+          "installDate": "2025-05-23",
+          "coverageRadius": 15000
+        },
+        {
+          "id": "TWR788828",
+          "status": "ACTIVE",
+          "towerType": "Lattice",
+          "location": {
+            "latitude": 30.2672,
+            "longitude": -97.7431
+          },
+          "installDate": "2025-05-24",
+          "coverageRadius": 20000
+        },
+        {
+          "id": "TWR654321",
+          "status": "ACTIVE",
+          "towerType": "Guyed",
+          "location": {
+            "latitude": 44.9778,
+            "longitude": -93.265
+          },
+          "installDate": "2025-05-25",
+          "coverageRadius": 25000
+        },
+        {
+          "id": "TWR123456",
+          "status": "ACTIVE",
+          "towerType": "Monopole",
+          "location": {
+            "latitude": 38.5816,
+            "longitude": -121.4944
+          },
+          "installDate": "2025-05-26",
+          "coverageRadius": 15000
+        },
+        {
+          "id": "TWR789012",
+          "status": "ACTIVE",
+          "towerType": "Lattice",
+          "location": {
+            "latitude": 42.3601,
+            "longitude": -71.0589
+          },
+          "installDate": "2025-05-27",
+          "coverageRadius": 20000
+        },
+        {
+          "id": "TWR345678",
+          "status": "ACTIVE",
+          "towerType": "Guyed",
+          "location": {
+            "latitude": 47.6062,
+            "longitude": -122.3321
+          },
+          "installDate": "2025-05-28",
+          "coverageRadius": 25000
+        },
+        {
+          "id": "TWR901234",
+          "status": "ACTIVE",
+          "towerType": "Monopole",
+          "location": {
+            "latitude": 32.7763,
+            "longitude": -96.7969
+          },
+          "installDate": "2025-05-29",
+          "coverageRadius": 15000
+        },
+        {
+          "id": "TWR567890",
+          "status": "ACTIVE",
+          "towerType": "Lattice",
+          "location": {
+            "latitude": 39.0997,
+            "longitude": -94.5783
+          },
+          "installDate": "2025-05-30",
+          "coverageRadius": 20000
+        },
+        {
+          "id": "TWR234567",
+          "status": "ACTIVE",
+          "towerType": "Guyed",
+          "location": {
+            "latitude": 45.5236,
+            "longitude": -122.675
+          },
+          "installDate": "2025-05-31",
+          "coverageRadius": 25000
+        },
+        {
+          "id": "TWR876543",
+          "status": "ACTIVE",
+          "towerType": "Monopole",
+          "location": {
+            "latitude": 33.7489,
+            "longitude": -84.3879
+          },
+          "installDate": "2025-06-01",
+          "coverageRadius": 15000
+        }
+      ],
+      "dashboard": {
+        "activeTowers": 2,
+        "totalDevices": 40000,
+        "users": 25000,
+        "securityAlerts": 1
+      },
+      "recentActivity": [
+        {
+          "timestamp": "2025-05-27 07:55:30",
+          "message": "New Tower Registered"
+        },
+        {
+          "timestamp": "2025-05-22 18:47:03",
+          "message": "TWR892828 Security resolved"
+        },
+        {
+          "timestamp": "2025-05-22 09:10:12",
+          "message": "Security Alert - TWR892828"
+        },
+        {
+          "timestamp": "2025-05-21 15:30:45",
+          "message": "TWR788828 Maintenance completed"
+        },
+        {
+          "timestamp": "2025-05-21 14:15:20",
+          "message": "New policy applied to TWR654321"
+        },
+        {
+          "timestamp": "2025-05-21 13:00:00",
+          "message": "System health check passed"
+        },
+        {
+          "timestamp": "2025-05-21 11:45:23",
+          "message": "TWR345678 status updated"
+        },
+        {
+          "timestamp": "2025-05-21 10:50:15",
+          "message": "User authentication failed - TWR901234"
+        },
+        {
+          "timestamp": "2025-05-21 09:35:42",
+          "message": "Backup completed successfully"
+        },
+        {
+          "timestamp": "2025-05-21 08:20:01",
+          "message": "TWR567890 configuration updated"
+        },
+        {
+          "timestamp": "2025-05-20 17:45:00",
+          "message": "Security scan initiated"
+        },
+        {
+          "timestamp": "2025-05-20 16:30:45",
+          "message": "TWR234567 maintenance scheduled"
+        },
+        {
+          "timestamp": "2025-05-20 15:15:30",
+          "message": "System update applied"
+        },
+        {
+          "timestamp": "2025-05-20 14:00:15",
+          "message": "TWR876543 status check passed"
+        },
+        {
+          "timestamp": "2025-05-19 23:45:00",
+          "message": "Nightly backup started"
+        },
+        {
+          "timestamp": "2025-05-19 22:30:45",
+          "message": "TWR111111 configuration verified"
+        },
+        {
+          "timestamp": "2025-05-19 21:15:30",
+          "message": "Security audit completed"
+        },
+        {
+          "timestamp": "2025-05-19 20:00:15",
+          "message": "TWR222222 maintenance completed"
+        },
+        {
+          "timestamp": "2025-05-19 18:45:00",
+          "message": "System performance optimized"
+        },
+        {
+          "timestamp": "2025-05-19 17:30:45",
+          "message": "TWR333333 status updated"
+        }
+      ]
+    },
+    {
+      "carrierName": "Verizon",
+      "email": "admin.verizon@carrier.com",
+      "towers": [
+        {
+          "id": "TWR111111",
+          "status": "ACTIVE",
+          "towerType": "Monopole",
+          "location": {
+            "latitude": 25.7617,
+            "longitude": -80.1918
+          },
+          "installDate": "2025-06-02",
+          "coverageRadius": 15000
+        },
+        {
+          "id": "TWR222222",
+          "status": "ACTIVE",
+          "towerType": "Lattice",
+          "location": {
+            "latitude": 26.4484,
+            "longitude": -81.9493
+          },
+          "installDate": "2025-06-03",
+          "coverageRadius": 20000
+        },
+        {
+          "id": "TWR333333",
+          "status": "ACTIVE",
+          "towerType": "Guyed",
+          "location": {
+            "latitude": 27.6648,
+            "longitude": -82.6456
+          },
+          "installDate": "2025-06-04",
+          "coverageRadius": 25000
+        },
+        {
+          "id": "TWR444444",
+          "status": "ACTIVE",
+          "towerType": "Monopole",
+          "location": {
+            "latitude": 28.5384,
+            "longitude": -81.3789
+          },
+          "installDate": "2025-06-05",
+          "coverageRadius": 15000
+        },
+        {
+          "id": "TWR555555",
+          "status": "ACTIVE",
+          "towerType": "Lattice",
+          "location": {
+            "latitude": 29.7604,
+            "longitude": -95.3698
+          },
+          "installDate": "2025-06-06",
+          "coverageRadius": 20000
+        },
+        {
+          "id": "TWR666666",
+          "status": "ACTIVE",
+          "towerType": "Guyed",
+          "location": {
+            "latitude": 30.2672,
+            "longitude": -97.7431
+          },
+          "installDate": "2025-06-07",
+          "coverageRadius": 25000
+        },
+        {
+          "id": "TWR777777",
+          "status": "ACTIVE",
+          "towerType": "Monopole",
+          "location": {
+            "latitude": 30.2672,
+            "longitude": -97.7431
+          },
+          "installDate": "2025-06-08",
+          "coverageRadius": 15000
+        },
+        {
+          "id": "TWR888888",
+          "status": "ACTIVE",
+          "towerType": "Lattice",
+          "location": {
+            "latitude": 35.2271,
+            "longitude": -80.8431
+          },
+          "installDate": "2025-06-09",
+          "coverageRadius": 20000
+        },
+        {
+          "id": "TWR999999",
+          "status": "ACTIVE",
+          "towerType": "Guyed",
+          "location": {
+            "latitude": 36.1627,
+            "longitude": -86.7816
+          },
+          "installDate": "2025-06-10",
+          "coverageRadius": 25000
+        },
+        {
+          "id": "TWR000000",
+          "status": "ACTIVE",
+          "towerType": "Monopole",
+          "location": {
+            "latitude": 37.7749,
+            "longitude": -122.4194
+          },
+          "installDate": "2025-06-11",
+          "coverageRadius": 15000
+        },
+        {
+          "id": "TWR876543",
+          "location": "WASHINGTON",
+          "towerType": "Monopole",
+          "installationDate": "2020-01-01",
+          "coverageRadius": "600",
+          "carriers": [
+            "Verizon"
+          ],
+          "supportedOS": [
+            "iOS",
+            "Android",
+            "Windows"
+          ],
+          "user": {
+            "username": "AT1234@att.com",
+            "password": "dasdasdasd",
+            "carrier": "AT&T"
+          },
+          "status": "ACTIVE"
+        },
+        {
+          "id": "TWR555555",
+          "location": "SEATTLE",
+          "towerType": "Monopole",
+          "installationDate": "2024-01-01",
+          "coverageRadius": "500",
+          "carriers": [
+            "Verizon"
+          ],
+          "supportedOS": [
+            "iOS",
+            "Android",
+            "Windows"
+          ],
+          "user": {
+            "username": "at5431@att.com",
+            "password": "dasdasdasd",
+            "carrier": "AT&T"
+          },
+          "status": "ACTIVE"
+        },
+        {
+          "id": "TWR567890",
+          "location": "utah",
+          "towerType": "Lattice",
+          "installationDate": "2026-01-01",
+          "coverageRadius": "500",
+          "carriers": [
+            "Verizon"
+          ],
+          "supportedOS": [
+            "iOS",
+            "Android",
+            "Windows"
+          ],
+          "user": {
+            "username": "dasd@verizon.com",
+            "password": "dasdasd",
+            "carrier": "Verizon"
+          },
+          "status": "ACTIVE"
+        }
+      ],
+      "dashboard": {
+        "activeTowers": 1,
+        "totalDevices": 30001,
+        "users": 15000,
+        "securityAlerts": 0
+      },
+      "recentActivity": [
+        {
+          "timestamp": "2025-06-03 20:12:36",
+          "message": "Device 13.91.222.248 registered",
+          "by": {
+            "username": "dasd@verizon.com",
+            "password": "dasdasd",
+            "carrier": "Verizon"
+          }
+        },
+        {
+          "timestamp": "2025-06-03 20:12:24",
+          "message": "TWR567890 Registered",
+          "by": {
+            "username": "dasd@verizon.com",
+            "password": "dasdasd",
+            "carrier": "Verizon"
+          }
+        },
+        {
+          "timestamp": "2025-06-03 06:25:50",
+          "message": "TWR555555 Registered",
+          "by": {
+            "username": "at5431@att.com",
+            "password": "dasdasdasd",
+            "carrier": "AT&T"
+          }
+        },
+        {
+          "timestamp": "2025-06-03 06:18:19",
+          "message": "TWR876543 Registered",
+          "by": {
+            "username": "AT1234@att.com",
+            "password": "dasdasdasd",
+            "carrier": "AT&T"
+          }
+        },
+        {
+          "timestamp": "2025-05-07 14:23:45",
+          "message": "New Admin added"
+        },
+        {
+          "timestamp": "2025-05-01 08:19:07",
+          "message": "New Admin added"
+        },
+        {
+          "timestamp": "2025-04-30 15:45:30",
+          "message": "New Admin added"
+        },
+        {
+          "timestamp": "2025-04-29 13:15:20",
+          "message": "New Admin added"
+        },
+        {
+          "timestamp": "2025-04-28 11:45:00",
+          "message": "New Admin added"
+        },
+        {
+          "timestamp": "2025-04-27 10:30:45",
+          "message": "New Admin added"
+        },
+        {
+          "timestamp": "2025-04-26 09:15:30",
+          "message": "New Admin added"
+        },
+        {
+          "timestamp": "2025-04-25 08:00:15",
+          "message": "New Admin added"
+        },
+        {
+          "timestamp": "2025-04-24 16:45:00",
+          "message": "New Admin added"
+        },
+        {
+          "timestamp": "2025-04-23 15:30:45",
+          "message": "New Admin added"
+        },
+        {
+          "timestamp": "2025-04-22 14:15:30",
+          "message": "New Admin added"
+        },
+        {
+          "timestamp": "2025-04-21 13:00:15",
+          "message": "New Admin added"
+        },
+        {
+          "timestamp": "2025-04-20 11:45:00",
+          "message": "New Admin added"
+        },
+        {
+          "timestamp": "2025-04-19 10:30:45",
+          "message": "New Admin added"
+        },
+        {
+          "timestamp": "2025-04-18 09:15:30",
+          "message": "New Admin added"
+        },
+        {
+          "timestamp": "2025-04-17 16:45:00",
+          "message": "New Admin added"
+        },
+        {
+          "timestamp": "2025-04-16 15:30:45",
+          "message": "New Admin added"
+        },
+        {
+          "timestamp": "2025-04-15 14:15:30",
+          "message": "New Admin added"
+        },
+        {
+          "timestamp": "2025-04-14 13:00:15",
+          "message": "New Admin added"
+        },
+        {
+          "timestamp": "2025-04-13 11:45:00",
+          "message": "New Admin added"
+        }
+      ]
+    }
+  ],
+  "policies": [
+    {
+      "name": "re",
+      "type": "Device Management",
+      "carrier": "AT&T",
+      "settings": {
+        "Allow VPN": true,
+        "Allow Camera": false,
+        "Allow Download": false,
+        "Block Restricted Apps": true,
+        "Block Jailbreak/Root Detection": false
+      },
+      "timestamp": "2025-06-03T05:28:04.485Z"
+    },
+    {
+      "name": "da",
+      "type": "Device Management",
+      "carrier": "AT&T",
+      "settings": {
+        "Allow VPN": false,
+        "Allow Camera": true,
+        "Allow Download": false,
+        "Block Restricted Apps": false,
+        "Block Jailbreak/Root Detection": true
+      },
+      "timestamp": "2025-06-03T05:35:06.380Z"
+    },
+    {
+      "name": "das",
+      "type": "Administrative",
+      "carrier": "AT&T",
+      "settings": {
+        "Allow VPN": false,
+        "Allow Camera": false,
+        "Allow Download": true,
+        "Block Restricted Apps": false,
+        "Block Jailbreak/Root Detection": true
+      },
+      "timestamp": "2025-06-03T05:35:22.352Z"
+    },
+    {
+      "name": "fa",
+      "type": "User Management",
+      "carrier": "AT&T",
+      "settings": {
+        "Allow VPN": false,
+        "Allow Camera": true,
+        "Allow Download": true,
+        "Block Restricted Apps": false,
+        "Block Jailbreak/Root Detection": true
+      },
+      "timestamp": "2025-06-03T05:37:15.785Z"
+    },
+    {
+      "name": "ja",
+      "type": "Administrative",
+      "carrier": "AT&T",
+      "settings": {
+        "Allow VPN": true,
+        "Allow Camera": false,
+        "Allow Download": false,
+        "Block Restricted Apps": true,
+        "Block Jailbreak/Root Detection": false
+      },
+      "timestamp": "2025-06-03T05:37:25.760Z"
+    },
+    {
+      "name": "write",
+      "type": "Administrative",
+      "carrier": "AT&T",
+      "settings": {
+        "Allow VPN": true,
+        "Allow Camera": true,
+        "Allow Download": false,
+        "Block Restricted Apps": false,
+        "Block Jailbreak/Root Detection": true
+      },
+      "timestamp": "2025-06-03T06:01:48.389Z"
+    },
+    {
+      "name": "UPDATE",
+      "type": "Administrative",
+      "carrier": "AT&T",
+      "settings": {
+        "Allow VPN": true,
+        "Allow Camera": false,
+        "Allow Download": false,
+        "Block Restricted Apps": true,
+        "Block Jailbreak/Root Detection": false
+      },
+      "timestamp": "2025-06-03T06:06:44.459Z"
+    },
+    {
+      "name": "Device Management",
+      "type": "Device Management",
+      "carrier": "AT&T",
+      "settings": {
+        "Allow VPN": true,
+        "Allow Camera": false,
+        "Allow Download": false,
+        "Block Restricted Apps": false,
+        "Block Jailbreak/Root Detection": false
+      },
+      "timestamp": "2025-06-03T06:08:50.889Z"
+    },
+    {
+      "name": "write",
+      "type": "Administrative",
+      "carrier": "AT&T",
+      "settings": {
+        "Allow VPN": true,
+        "Allow Camera": false,
+        "Allow Download": false,
+        "Block Restricted Apps": true,
+        "Block Jailbreak/Root Detection": false
+      },
+      "timestamp": "2025-06-04T02:51:34.602Z"
+    }
+  ],
+  "recentActivity": [
+    {
+      "timestamp": "6/3/2025, 7:51:34 PM",
+      "message": "Policy \"write\" applied to carrier \"AT&T\"",
+      "by": "athira@att.com"
+    },
+    {
+      "timestamp": "6/2/2025, 11:08:50 PM",
+      "message": "Policy \"Device Management\" applied to carrier \"AT&T\"",
+      "by": "AM123@att.com"
+    },
+    {
+      "timestamp": "6/2/2025, 11:06:44 PM",
+      "message": "Policy \"UPDATE\" applied to carrier \"AT&T\"",
+      "by": "at1234@att.com"
+    },
+    {
+      "timestamp": "6/2/2025, 11:01:48 PM",
+      "message": "Policy \"write\" applied to carrier \"AT&T\"",
+      "by": "T1234@att.com"
+    },
+    {
+      "timestamp": "6/2/2025, 10:37:25 PM",
+      "message": "Policy \"ja\" applied to carrier \"AT&T\"",
+      "by": "dasd@att.com"
+    },
+    {
+      "timestamp": "6/2/2025, 10:37:15 PM",
+      "message": "Policy \"fa\" applied to carrier \"AT&T\"",
+      "by": "dasd@att.com"
+    },
+    {
+      "timestamp": "6/2/2025, 10:35:22 PM",
+      "message": "Policy \"das\" applied to carrier \"AT&T\"",
+      "by": "asd@att.com"
+    },
+    {
+      "timestamp": "6/2/2025, 10:35:06 PM",
+      "message": "Policy \"da\" applied to carrier \"AT&T\"",
+      "by": "asd@att.com"
+    },
+    {
+      "timestamp": "6/2/2025, 10:28:04 PM",
+      "message": "Policy \"re\" applied to carrier \"AT&T\"",
+      "by": "dasdas@att.com"
+    }
+  ]
+}
