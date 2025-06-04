@@ -1,25 +1,9 @@
-import { createReducer } from "@reduxjs/toolkit";
+import { createReducer, PayloadAction } from "@reduxjs/toolkit";
 import { formatCarrierData } from "../../components/utils/util";
 import { setDashboardData } from "./dashboardActions";
+import { Dashboard, CarrierList } from "../../types/carrierType";
 
-interface TowerStatus {
-  id: string;
-  status: "ACTIVE" | "INACTIVE";
-}
-
-interface Activity {
-  timestamp: string;
-  message: string;
-}
-
-interface DashboardState {
-  activeTowers: number;
-  totalDevices: number;
-  users: number;
-  securityAlerts: number;
-  towerStatuses: TowerStatus[];
-  recentActivity: Activity[];
-}
+type DashboardState = Dashboard;
 
 const initialState: DashboardState = {
   activeTowers: 25,
@@ -53,9 +37,8 @@ const initialState: DashboardState = {
 };
 
 const dashboardReducer = createReducer(initialState, (builder) => {
-  builder.addCase(setDashboardData, (state, action) => {
-    const { data } = action.payload;
-    return formatCarrierData(data);
+  builder.addCase(setDashboardData, (state, action: PayloadAction<CarrierList>) => {
+    return formatCarrierData(action.payload);
   });
 });
 

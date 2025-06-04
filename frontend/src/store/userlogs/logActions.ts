@@ -1,3 +1,4 @@
 import { createAction } from "@reduxjs/toolkit";
+import { LogEntry } from "../../types/carrierType";
 
-export const setUserLogs = createAction<any[]>("logs/setUserLogs");
+export const setUserLogs = createAction<LogEntry[]>("logs/setUserLogs");

@@ -18,6 +18,8 @@ import {
 } from "@mui/material";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchTowers, registerTower } from "../../store/towers/towerThunks";
+import { RootState, AppDispatch } from "../../store/store";
+import { TowerRegistrationData } from "../../types/carrierType";
 
 const CARRIER_OPTIONS = ["AT&T", "Verizon", "T-Mobile"];
 const OS_OPTIONS = ["iOS", "Android", "Windows"];
@@ -37,9 +39,9 @@ const TowerRegistrationForm: React.FC = () => {
     "Android",
     "Windows",
   ]);
-  const user = useSelector((state: any) => state.user);
-  const towerList = useSelector((state: any) => state.towers);
-  const dispatch = useDispatch();
+  const user = useSelector((state: RootState) => state.user);
+  const towerList = useSelector((state: RootState) => state.towers);
+  const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
     dispatch(fetchTowers());
@@ -70,7 +72,7 @@ const TowerRegistrationForm: React.FC = () => {
   };
 
   const handleSubmit = () => {
-    const formData = {
+    const formData: TowerRegistrationData = {
       id,
       location,
       towerType,
@@ -95,17 +97,22 @@ const TowerRegistrationForm: React.FC = () => {
         <Autocomplete
           options={towerList}
           value={id}
-          onChange={(event: any, newValue: string | null) => {
+          onChange={(
+            event: React.SyntheticEvent,
+            newValue: string | null
+          ) => {
             setTowerId(newValue || "");
           }}
-          renderInput={(params: any) => (
+          renderInput={(params) => (
             <TextField
               {...params}
               fullWidth
               label="Tower ID"
               variant="outlined"
               value={id}
-              onClick={(e) => setTowerId(e.target.value)}
+              onClick={(e) =>
+                setTowerId((e.target as HTMLInputElement).value)
+              }
             />
           )}
         />

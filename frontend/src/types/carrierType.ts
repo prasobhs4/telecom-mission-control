@@ -1,78 +1,113 @@
-export type Tower = {
+export interface Tower {
   id: string;
   status: "ACTIVE" | "INACTIVE";
-};
+}
 
-export type DashboardStats = {
+export interface DashboardStats {
   activeTowers: number;
   totalDevices: number;
   users: number;
   securityAlerts: number;
-};
+}
 
-export type RecentActivity = {
+export interface RecentActivity {
   timestamp: string; // ISO datetime format
   message: string;
-};
+}
 
-export type Carrier = {
+export interface Carrier {
   carrierName: string;
   email: string;
   towers: Tower[];
   dashboard: DashboardStats;
   recentActivity: RecentActivity[];
-};
+}
 
 export type CarrierList = Carrier[];
 
-type User = {
+export interface User {
   username: string;
   password: string;
   carrier: string;
-};
+}
 
-type Location = {
+export interface Location {
   latitude: number;
   longitude: number;
-};
+}
 
-type TowerStatus = {
+export interface TowerStatus {
   id: string;
-  status: string;
+  status: "ACTIVE" | "INACTIVE";
   towerType: string;
   location: Location;
   installDate: string;
   coverageRadius: number;
-};
+}
 
-type Activity = {
+export interface Activity {
   timestamp: string;
   message: string;
   by: User;
-};
+}
 
-type Device = {
-  discovered: any[]; // You can replace `any` with a proper type if known
-  simulated: any | null; // Replace `any` with actual simulated device type if defined
-};
+export interface LogEntry {
+  userId: string;
+  action: string;
+  timestamp: string;
+}
 
-type Policy = {
+export interface Device {
+  ip: string;
+  mac: string;
+  vendor: string;
+  model: string;
+  carrier?: string;
+  status?: string;
+  user?: User;
+}
+
+export interface DeviceState {
+  discovered: Device[];
+  simulated: Device | null;
+}
+
+export interface PolicyState {
   applied: boolean;
-  logs: any[]; // Replace with specific log type if available
-};
+  logs: LogEntry[];
+}
 
-type Dashboard = {
+export interface PolicyPayload {
+  policyName: string;
+  policyType: string;
+  apply: Record<string, boolean>;
+  user: string;
+  carrier: string;
+}
+
+export interface TowerRegistrationData {
+  id: string;
+  location: string;
+  towerType: string;
+  installationDate: string;
+  coverageRadius: string;
+  carriers: string[];
+  supportedOS: string[];
+  user: User;
+}
+
+export interface Dashboard {
   activeTowers: number;
   totalDevices: number;
   users: number;
   securityAlerts: number;
   towerStatuses: TowerStatus[];
   recentActivity: Activity[];
-};
+}
 
-export type AppState = {
+export interface AppState {
   user: User;
   dashboard: Dashboard;
-  towers: any[];
-  policy: Policy;
-};
+  towers: string[];
+  policy: PolicyState;
+}
