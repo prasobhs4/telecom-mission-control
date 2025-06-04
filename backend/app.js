@@ -1,5 +1,5 @@
 const express = require("express");
-const fs = require("fs/promises");
+const { readJSON, writeJSON } = require("./utils");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const { body, validationResult } = require("express-validator");
@@ -18,13 +18,7 @@ const {
 app.use(cors({ origin: "*" }));
 app.use(bodyParser.json());
 
-const formatTimestamp = () => {
-  const now = new Date();
-  const pad = (n) => (n < 10 ? "0" + n : n);
-  return `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(
-    now.getDate()
-  )} ${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
-};
+const formatTimestamp = () => new Date().toISOString().replace("T", " ").slice(0, 19);
 
 app.get("/api/dashboard", async (req, res) => {
   const { carrier } = req.query;
@@ -33,9 +27,7 @@ app.get("/api/dashboard", async (req, res) => {
 
   let master;
   try {
-    master = JSON.parse(
-      await fs.readFile("../models/master.json", "utf-8")
-    );
+    master = await readJSON("master.json");
   } catch (err) {
     return res.status(500).json({ error: "Error reading master.json" });
   }
@@ -63,9 +55,7 @@ app.get("/api/dashboard", async (req, res) => {
 
 app.get("/api/towers", async (req, res) => {
   try {
-    const towers = JSON.parse(
-      await fs.readFile("../models/towers.json", "utf-8")
-    );
+    const towers = await readJSON("towers.json");
     return res.status(200).json(towers);
   } catch (err) {
     return res.status(500).json({ error: "Error reading towers.json" });
@@ -86,8 +76,8 @@ app.post(
     }
 
     const towerData = req.body;
-    const towers = JSON.parse(await fs.readFile("../models/towers.json", "utf8"));
-    const master = JSON.parse(await fs.readFile("../models/master.json", "utf8"));
+    const towers = await readJSON("towers.json");
+    const master = await readJSON("master.json");
 
   const tower = towers.find((t) => t.towerId === towerData.id);
   if (!tower) return res.status(404).json({ error: "Tower not found" });
@@ -112,13 +102,10 @@ app.post(
     by: towerData.user || "admin",
   });
 
-  await fs.writeFile("../models/master.json", JSON.stringify(master, null, 2));
+  await writeJSON("master.json", master);
 
   const updatedTowers = towers.filter((t) => t.towerId !== towerData.towerId);
-  await fs.writeFile(
-    "../models/towers.json",
-    JSON.stringify(updatedTowers, null, 2)
-  );
+  await writeJSON("towers.json", updatedTowers);
 
   res.sendStatus(200);
 });
@@ -139,10 +126,8 @@ app.post(
 
     const { ip, mac, vendor, model, user } = req.body;
 
-  const devs = JSON.parse(
-    await fs.readFile("../models/devicediscovery.json", "utf8")
-  );
-  const master = JSON.parse(await fs.readFile("../models/master.json", "utf8"));
+  const devs = await readJSON("devicediscovery.json");
+  const master = await readJSON("master.json");
 
   const carrierName = user?.carrier || "AT&T";
 
@@ -157,10 +142,7 @@ app.post(
   };
 
   devs.push(newDevice);
-  await fs.writeFile(
-    "../models/devicediscovery.json",
-    JSON.stringify(devs, null, 2)
-  );
+  await writeJSON("devicediscovery.json", devs);
 
   const targetCarrier = master.carriers.find(
     (c) => c.carrierName === carrierName
@@ -174,15 +156,13 @@ app.post(
     });
   }
 
-  await fs.writeFile("../models/master.json", JSON.stringify(master, null, 2));
+  await writeJSON("master.json", master);
 
   res.status(200).json({ message: "Device registered successfully" });
 });
 
 app.get("/api/device-discovery", async (req, res) => {
-  const discoveryData = JSON.parse(
-    await fs.readFile("../models/devicediscovery.json", "utf8")
-  );
+  const discoveryData = await readJSON("devicediscovery.json");
   res.status(200).json(discoveryData);
 });
 
@@ -205,9 +185,7 @@ app.post(
     const { policyName, policyType, apply, user, carrier } = req.body;
 
   try {
-    const master = JSON.parse(
-      await fs.readFile("../models/master.json", "utf8")
-    );
+    const master = await readJSON("master.json");
 
     const newPolicy = {
       name: policyName,
@@ -259,7 +237,7 @@ app.post(
       by: user,
     });
 
-    await fs.writeFile("../models/master.json", JSON.stringify(master, null, 2));
+    await writeJSON("master.json", master);
     res.sendStatus(200);
   } catch (err) {
     console.error("Policy update error:", err);
@@ -277,7 +255,7 @@ app.get("/api/user-logs", async (req, res) => {
   }
 
   try {
-    const master = JSON.parse(await fs.readFile("../models/master.json", "utf8"));
+    const master = await readJSON("master.json");
     const targetCarrier = master.carriers.find(
       (c) => c.carrierName === carrier
     );
@@ -319,9 +297,7 @@ app.post(
     const { carrier } = req.body;
 
     try {
-      const master = JSON.parse(
-        await fs.readFile("../models/master.json", "utf8")
-      );
+      const master = await readJSON("master.json");
       const targetCarrier = master.carriers.find(
         (c) => c.carrierName === carrier
       );
@@ -331,7 +307,7 @@ app.post(
 
       targetCarrier.dashboard.securityAlerts = 0;
 
-      await fs.writeFile("../models/master.json", JSON.stringify(master, null, 2));
+      await writeJSON("master.json", master);
 
       res.sendStatus(200);
     } catch (err) {
