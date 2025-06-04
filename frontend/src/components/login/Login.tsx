@@ -31,23 +31,25 @@ const Login: React.FC<{ onLogin?: () => void }> = ({
   return (
     <div className="login-container">
       <img src={backgroundImage} alt="background" className="background-img" />
-      <form className="login-form" onSubmit={handleSubmit}>
+      <form className="login-form" onSubmit={handleSubmit} aria-label="login form">
         <h2>Carrier Access Login</h2>
+        <label htmlFor="username">Username</label>
         <input
+          id="username"
           type="text"
-          placeholder="Username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           required
         />
+        <label htmlFor="password">Password</label>
         <input
+          id="password"
           type="password"
-          placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-        <button type="submit">Login</button>
+        <button type="submit" aria-label="Login">Login</button>
       </form>
     </div>
   );

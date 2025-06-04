@@ -2,7 +2,8 @@
 
 Telecom Mission Control is a sample SaaS platform for managing cell towers, devices and carrier operations.
 It provides a dashboard, tower registration, device discovery and policy management tools. The app is
-designed to work globally and offline with full accessibility support.
+designed to work globally and offline with full accessibility support. The frontend is implemented as a
+Progressive Web App (PWA) so users can access data even without a network connection.
 
 ## Features
 
@@ -14,8 +15,8 @@ designed to work globally and offline with full accessibility support.
   - _Premium_: automatically fix issues by applying tower policies.
 - **Real‑world tower data** – integrates tower information from different real estate owners.
 - **Onboarding & discovery** – register new users and devices or auto‑discover enterprise devices.
-- **Global & offline** – works worldwide even without internet access.
-- **Accessibility** – responsive UI that supports all screen sizes and a11y needs.
+- **Global & offline** – works worldwide even without internet access thanks to service workers.
+- **Accessibility** – mobile‑responsive UI with ARIA labels for screen reader support.
 
 ## Project Structure
 
@@ -36,6 +37,10 @@ designed to work globally and offline with full accessibility support.
    npm start
    ```
    The API server will run on `http://localhost:8000` and the client on `http://localhost:5173`.
+3. For a production build with offline capability:
+   ```bash
+   cd frontend && npm run build
+   ```
 
 Log in with any email. The domain before `.com` determines the carrier (e.g. `user@att.example.com`).
 
