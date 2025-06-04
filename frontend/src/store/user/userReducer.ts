@@ -13,14 +13,14 @@ const initialState: UserState = {
   carrier: "",
 };
 
-const userReducer = createReducer(initialState, (builder: any) => {
+const userReducer = createReducer(initialState, (builder) => {
   builder
-    .addCase(setUser, (state: any, action: any) => {
+    .addCase(setUser, (state, action: any) => {
       state.username = action.payload.username;
       state.password = action.payload.password;
       state.carrier = action.payload.carrier;
     })
-    .addCase(clearUser, (state: any) => {
+    .addCase(clearUser, (state) => {
       state.username = "";
       state.password = "";
       state.carrier = "";

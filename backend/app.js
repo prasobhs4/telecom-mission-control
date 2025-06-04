@@ -1,9 +1,19 @@
 const express = require("express");
-const fs = require("fs");
+const fs = require("fs/promises");
 const cors = require("cors");
 const bodyParser = require("body-parser");
+const { body, validationResult } = require("express-validator");
+
+require("dotenv").config()
 const app = express();
-const PORT = 8000;
+
+const {
+  PORT = 8000,
+  DB_HOST,
+  DB_USER,
+  DB_PASS,
+  DB_NAME,
+} = process.env;
 
 app.use(cors({ origin: "*" }));
 app.use(bodyParser.json());
@@ -16,15 +26,18 @@ const formatTimestamp = () => {
   )} ${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
 };
 
-app.get("/api/dashboard", (req, res) => {
+app.get("/api/dashboard", async (req, res) => {
   const { carrier } = req.query;
-  if (!carrier) return res.status(400).send("Carrier is required");
+  if (!carrier)
+    return res.status(400).json({ error: "Carrier is required" });
 
   let master;
   try {
-    master = JSON.parse(fs.readFileSync("../models/master.json", "utf-8"));
+    master = JSON.parse(
+      await fs.readFile("../models/master.json", "utf-8")
+    );
   } catch (err) {
-    return res.status(500).send("Error reading master.json");
+    return res.status(500).json({ error: "Error reading master.json" });
   }
   const filteredCarriers =
     carrier !== "admin"
@@ -48,30 +61,41 @@ app.get("/api/dashboard", (req, res) => {
   return res.status(200).json(result);
 });
 
-app.get("/api/towers", (req, res) => {
+app.get("/api/towers", async (req, res) => {
   try {
     const towers = JSON.parse(
-      fs.readFileSync("../models/towers.json", "utf-8")
+      await fs.readFile("../models/towers.json", "utf-8")
     );
     return res.status(200).json(towers);
   } catch (err) {
-    return res.status(500).send("Error reading towers.json");
+    return res.status(500).json({ error: "Error reading towers.json" });
   }
 });
 
 // POST register tower
-app.post("/api/register-tower", (req, res) => {
-  const towerData = req.body;
-  const towers = JSON.parse(fs.readFileSync("../models/towers.json", "utf8"));
-  const master = JSON.parse(fs.readFileSync("../models/master.json", "utf8"));
+app.post(
+  "/api/register-tower",
+  [
+    body("id", "id is required").notEmpty(),
+    body("carriers", "carriers is required").isArray({ min: 1 }),
+  ],
+  async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ error: errors.array()[0].msg });
+    }
+
+    const towerData = req.body;
+    const towers = JSON.parse(await fs.readFile("../models/towers.json", "utf8"));
+    const master = JSON.parse(await fs.readFile("../models/master.json", "utf8"));
 
   const tower = towers.find((t) => t.towerId === towerData.id);
-  if (!tower) return res.status(404).send("Tower not found");
+  if (!tower) return res.status(404).json({ error: "Tower not found" });
 
   const carrier = master.carriers.find(
     (c) => c.carrierName === towerData.carriers[0]
   );
-  if (!carrier) return res.status(404).send("Carrier not found");
+  if (!carrier) return res.status(404).json({ error: "Carrier not found" });
 
   const flatList = Array.isArray(carrier.towers[0])
     ? carrier.towers[0]
@@ -88,10 +112,10 @@ app.post("/api/register-tower", (req, res) => {
     by: towerData.user || "admin",
   });
 
-  fs.writeFileSync("../models/master.json", JSON.stringify(master, null, 2));
+  await fs.writeFile("../models/master.json", JSON.stringify(master, null, 2));
 
   const updatedTowers = towers.filter((t) => t.towerId !== towerData.towerId);
-  fs.writeFileSync(
+  await fs.writeFile(
     "../models/towers.json",
     JSON.stringify(updatedTowers, null, 2)
   );
@@ -99,13 +123,28 @@ app.post("/api/register-tower", (req, res) => {
   res.sendStatus(200);
 });
 
-app.post("/api/simulate-device", (req, res) => {
-  const { ip, mac, vendor, model, user } = req.body;
+app.post(
+  "/api/simulate-device",
+  [
+    body("ip", "ip is required").notEmpty(),
+    body("mac", "mac is required").notEmpty(),
+    body("vendor", "vendor is required").notEmpty(),
+    body("model", "model is required").notEmpty(),
+  ],
+  async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ error: errors.array()[0].msg });
+    }
+
+    const { ip, mac, vendor, model, user } = req.body;
 
   const devs = JSON.parse(
-    fs.readFileSync("../models/devicediscovery.json", "utf8")
+    await fs.readFile("../models/devicediscovery.json", "utf8")
   );
-  const master = JSON.parse(fs.readFileSync("../models/master.json", "utf8"));
+  const master = JSON.parse(await fs.readFile("../models/master.json", "utf8"));
+
+  const carrierName = user?.carrier || "AT&T";
 
   const newDevice = {
     ip,
@@ -114,42 +153,61 @@ app.post("/api/simulate-device", (req, res) => {
     model,
     discoveredAt: new Date().toISOString().replace("T", " ").slice(0, 19),
     status: "available",
+    carrier: carrierName,
   };
 
   devs.push(newDevice);
-  fs.writeFileSync(
+  await fs.writeFile(
     "../models/devicediscovery.json",
     JSON.stringify(devs, null, 2)
   );
 
-  const att = master.carriers.find((c) => c.carrierName === "AT&T");
-  if (att) {
-    att.dashboard.totalDevices += 1;
-    att.recentActivity.unshift({
+  const targetCarrier = master.carriers.find(
+    (c) => c.carrierName === carrierName
+  );
+  if (targetCarrier) {
+    targetCarrier.dashboard.totalDevices += 1;
+    targetCarrier.recentActivity.unshift({
       timestamp: formatTimestamp(),
       message: `Device ${ip} registered`,
       by: user || "admin",
     });
   }
 
-  fs.writeFileSync("../models/master.json", JSON.stringify(master, null, 2));
+  await fs.writeFile("../models/master.json", JSON.stringify(master, null, 2));
 
-  res.send({ message: "Device registered successfully" });
+  res.status(200).json({ message: "Device registered successfully" });
 });
 
-app.get("/api/device-discovery", (req, res) => {
+app.get("/api/device-discovery", async (req, res) => {
   const discoveryData = JSON.parse(
-    fs.readFileSync("../models/devicediscovery.json", "utf8")
+    await fs.readFile("../models/devicediscovery.json", "utf8")
   );
   res.status(200).json(discoveryData);
 });
 
 // POST /api/policy
-app.post("/api/policy", (req, res) => {
-  const { policyName, policyType, apply, user, carrier } = req.body;
+app.post(
+  "/api/policy",
+  [
+    body("policyName", "policyName is required").notEmpty(),
+    body("policyType", "policyType is required").notEmpty(),
+    body("apply", "apply is required").notEmpty(),
+    body("user", "user is required").notEmpty(),
+    body("carrier", "carrier is required").notEmpty(),
+  ],
+  async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ error: errors.array()[0].msg });
+    }
+
+    const { policyName, policyType, apply, user, carrier } = req.body;
 
   try {
-    const master = JSON.parse(fs.readFileSync("../models/master.json", "utf8"));
+    const master = JSON.parse(
+      await fs.readFile("../models/master.json", "utf8")
+    );
 
     const newPolicy = {
       name: policyName,
@@ -201,28 +259,31 @@ app.post("/api/policy", (req, res) => {
       by: user,
     });
 
-    fs.writeFileSync("../models/master.json", JSON.stringify(master, null, 2));
+    await fs.writeFile("../models/master.json", JSON.stringify(master, null, 2));
     res.sendStatus(200);
   } catch (err) {
     console.error("Policy update error:", err);
-    res.status(500).send("Failed to apply policy.");
+    res.status(500).json({ error: "Failed to apply policy." });
   }
 });
 
-app.get("/api/user-logs", (req, res) => {
+app.get("/api/user-logs", async (req, res) => {
   const { carrier, start, end } = req.query;
 
   if (!carrier || !start || !end) {
-    return res.status(400).send("carrier, start, and end dates are required");
+    return res
+      .status(400)
+      .json({ error: "carrier, start, and end dates are required" });
   }
 
   try {
-    const master = JSON.parse(fs.readFileSync("../models/master.json", "utf8"));
+    const master = JSON.parse(await fs.readFile("../models/master.json", "utf8"));
     const targetCarrier = master.carriers.find(
       (c) => c.carrierName === carrier
     );
 
-    if (!targetCarrier) return res.status(404).send("Carrier not found");
+    if (!targetCarrier)
+      return res.status(404).json({ error: "Carrier not found" });
 
     const startDate = new Date(start);
     const endDate = new Date(end);
@@ -242,10 +303,49 @@ app.get("/api/user-logs", (req, res) => {
     res.status(200).json(logs);
   } catch (err) {
     console.error("Error fetching user logs", err);
-    res.status(500).send("Internal server error");
+    res.status(500).json({ error: "Internal server error" });
   }
 });
 
-app.listen(PORT, () =>
-  console.log(`Server running on http://localhost:${PORT}`)
+app.post(
+  "/api/upgrade",
+  [body("carrier", "carrier is required").notEmpty()],
+  async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ error: errors.array()[0].msg });
+    }
+
+    const { carrier } = req.body;
+
+    try {
+      const master = JSON.parse(
+        await fs.readFile("../models/master.json", "utf8")
+      );
+      const targetCarrier = master.carriers.find(
+        (c) => c.carrierName === carrier
+      );
+
+      if (!targetCarrier)
+        return res.status(404).json({ error: "Carrier not found" });
+
+      targetCarrier.dashboard.securityAlerts = 0;
+
+      await fs.writeFile("../models/master.json", JSON.stringify(master, null, 2));
+
+      res.sendStatus(200);
+    } catch (err) {
+      console.error("Upgrade error:", err);
+      res.status(500).json({ error: "Failed to upgrade." });
+    }
+  }
 );
+
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
+  if (DB_HOST) {
+    console.log(
+      `Database: ${DB_NAME || ""} at ${DB_HOST} as ${DB_USER || ""}`
+    );
+  }
+});

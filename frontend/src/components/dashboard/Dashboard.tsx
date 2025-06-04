@@ -3,12 +3,11 @@ import { Card, CardContent, Typography, Grid, Box } from "@mui/material";
 
 const Dashboard = () => {
   const dashboard = useSelector((state: any) => state.dashboard);
-  console.log(dashboard);
 
   return (
-    <Box sx={{ padding: 5 }}>
+    <Box sx={{ p: { xs: 2, sm: 5 } }}>
       <Grid container spacing={4}>
-        <Grid size={3}>
+        <Grid item xs={12} sm={6} md={3}>
           <Card>
             <CardContent>
               <Typography variant="h6">Active Towers</Typography>
@@ -17,7 +16,7 @@ const Dashboard = () => {
           </Card>
         </Grid>
 
-        <Grid size={3}>
+        <Grid item xs={12} sm={6} md={3}>
           <Card>
             <CardContent>
               <Typography variant="h6">Total Devices</Typography>
@@ -25,7 +24,7 @@ const Dashboard = () => {
             </CardContent>
           </Card>
         </Grid>
-        <Grid size={3}>
+        <Grid item xs={12} sm={6} md={3}>
           <Card>
             <CardContent>
               <Typography variant="h6">Users</Typography>
@@ -33,7 +32,7 @@ const Dashboard = () => {
             </CardContent>
           </Card>
         </Grid>
-        <Grid size={3}>
+        <Grid item xs={12} sm={6} md={3}>
           <Card>
             <CardContent>
               <Typography variant="h6">Security Alerts</Typography>
@@ -43,8 +42,8 @@ const Dashboard = () => {
         </Grid>
       </Grid>
 
-      <Grid container spacing={2} mt={10}>
-        <Grid size={4}>
+      <Grid container spacing={2} mt={{ xs: 4, sm: 10 }}>
+        <Grid item xs={12} md={4}>
           <Card sx={{ maxHeight: 400, overflowY: "auto" }}>
             <CardContent>
               <Typography
@@ -87,7 +86,6 @@ const Dashboard = () => {
                 </thead>
                 <tbody>
                   {dashboard.towerStatuses.map((t) => {
-                    console.log(t);
                     return (
                       <tr key={t.id}>
                         <td
@@ -117,7 +115,7 @@ const Dashboard = () => {
           </Card>
         </Grid>
 
-        <Grid size={8}>
+        <Grid item xs={12} md={8}>
           <Card sx={{ maxHeight: 400, overflowY: "auto" }}>
             <CardContent>
               <Typography variant="h6">Recent Activity</Typography>

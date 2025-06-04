@@ -7,65 +7,50 @@ import {
   Divider,
   Paper,
 } from "@mui/material";
-import axios from "axios";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchDevices, simulateDevice } from "../../store/device/deviceThunks";
 import { generateRandomDevice } from "../utils/util";
 
-const API_BASE = "http://localhost:8000";
-
-const DeviceDiscovery: React.FC = ({ simulate, setSimulate }: any) => {
+const DeviceDiscovery: React.FC = () => {
   const [towerId, setTowerId] = useState("");
   const [location, setLocation] = useState("");
   const [coverageRadius, setCoverageRadius] = useState("");
   const [macAddress, setMacAddress] = useState("");
-  const [discoveredDevices, setDiscoveredDevices] = useState<any[]>([]);
   const [searchResult, setSearchResult] = useState<any | null>(null);
+  const dispatch = useDispatch();
   const user = useSelector((state: any) => state.user);
+  const discoveredDevices = useSelector((state: any) => state.device.discovered);
+  const simulate = useSelector((state: any) => state.device.simulated);
 
   const handleReset = () => {
     setTowerId("");
     setLocation("");
     setCoverageRadius("");
     setMacAddress("");
-    setDiscoveredDevices([]);
     setSearchResult(null);
+    dispatch(fetchDevices());
   };
 
   useEffect(() => {
-    fetchDeviceInfo();
-  }, [simulate]);
+    dispatch(fetchDevices());
+  }, [dispatch, simulate]);
 
   const handleSimulateDiscovery = async () => {
-    const newDevice = { ...generateRandomDevice(), user }; // generate fresh device
-    try {
-      await axios.post(`${API_BASE}/api/simulate-device`, newDevice); // use new device
-      setSimulate(newDevice); // reflect it in modal or UI
-      alert(`Device registered: ${newDevice.ip} / ${newDevice.mac}`);
-    } catch (err) {
-      console.error(err);
-      alert("Simulation failed");
-    }
+    const newDevice = { ...generateRandomDevice(), user };
+    dispatch(simulateDevice(newDevice));
+    alert(`Device registered: ${newDevice.ip} / ${newDevice.mac}`);
   };
 
-  const fetchDeviceInfo = async () => {
-    try {
-      const res = await axios.get(`${API_BASE}/api/device-discovery`);
-      setDiscoveredDevices(res.data);
-    } catch (err) {
-      console.error("Discovery failed", err);
-    }
-  };
 
   const handleSearch = () => {
     const match = discoveredDevices.find(
       (d) => d.ip === towerId || d.mac === macAddress
     );
-    console.log("match found", discoveredDevices);
     setSearchResult(match || null);
   };
 
   return (
-    <Box sx={{ px: 6, py: 4, maxWidth: "600px", margin: "0 auto" }}>
+    <Box sx={{ px: { xs: 2, sm: 6 }, py: 4, maxWidth: "600px", margin: "0 auto" }}>
       <Typography variant="h4" sx={{ mb: 4 }}>
         Device Discovery Input
       </Typography>
@@ -130,9 +115,6 @@ const DeviceDiscovery: React.FC = ({ simulate, setSimulate }: any) => {
             <Typography>IP: {searchResult.ip}</Typography>
             <Typography>MAC: {searchResult.mac}</Typography>
             <Typography>Carrier: {searchResult.carrier}</Typography>
-            <Typography>
-              {/* Supported OS: {searchResult.supportedOS.join(", ")} */}
-            </Typography>
             <Typography>Status: {searchResult.status}</Typography>
           </Paper>
         </>
