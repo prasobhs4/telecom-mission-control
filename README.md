@@ -31,7 +31,8 @@ For an architectural overview see [docs/SYSTEM_DESIGN.md](docs/SYSTEM_DESIGN.md)
    ```bash
    npm install
    cd backend && npm install
-   cd ../frontend && npm install
+   cd ../frontend && npm install --legacy-peer-deps
+   cd ..
    ```
 2. Copy `.env.example` to `.env` and update any values if required.
 3. Start the development environment (runs server and client concurrently):
@@ -44,6 +45,12 @@ For an architectural overview see [docs/SYSTEM_DESIGN.md](docs/SYSTEM_DESIGN.md)
    cd frontend && npm run build
    ```
 
+
+For testing or login purposes, users should follow one of the below formats based on their carrier:
+username@att.com
+username@verizon.com
+username@tmobile.com
+username@admin.com
 Log in with any email. The domain before `.com` determines the carrier (e.g. `user@att.example.com`).
 
 ## Data
@@ -55,3 +62,28 @@ been registered yet. Device discovery events are stored in `devicediscovery.json
 ## License
 
 This project is provided for demo purposes and is licensed under the ISC license.
+
+
+Screenshots for reference:
+
+Login Page:
+<img width="1508" alt="image" src="https://github.com/user-attachments/assets/c4269891-b72d-47ed-a382-72de46c4c37f" />
+
+Landing Page(Dashboard):
+<img width="1499" alt="image" src="https://github.com/user-attachments/assets/b9e1f0a3-6515-431e-9904-055ece595f41" />
+
+Tower Registration Form:
+<img width="1507" alt="image" src="https://github.com/user-attachments/assets/5a8e9e64-f568-423d-8e93-f6a49bf2f433" />
+
+Device Discovery Input:
+imulate device registration via the tower, which updates the database and reflects the changes in the recent activity log.
+<img width="1500" alt="image" src="https://github.com/user-attachments/assets/9bf70d83-3312-40e5-8e23-ed8a3606908f" />
+
+Policy Setup:
+<img width="1508" alt="image" src="https://github.com/user-attachments/assets/7935635e-8524-4418-9a50-6602fb9c6c6a" />
+
+User Action Log:
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/3dee21bb-850d-4a55-9c42-27a5ea206c6f" />
+
+
+
