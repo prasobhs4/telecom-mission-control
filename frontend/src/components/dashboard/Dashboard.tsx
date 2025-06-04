@@ -3,7 +3,6 @@ import { Card, CardContent, Typography, Grid, Box } from "@mui/material";
 
 const Dashboard = () => {
   const dashboard = useSelector((state: any) => state.dashboard);
-  console.log(dashboard);
 
   return (
     <Box sx={{ padding: 5 }}>
@@ -87,7 +86,6 @@ const Dashboard = () => {
                 </thead>
                 <tbody>
                   {dashboard.towerStatuses.map((t) => {
-                    console.log(t);
                     return (
                       <tr key={t.id}>
                         <td

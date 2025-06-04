@@ -86,7 +86,6 @@ const TowerRegistrationForm: React.FC = ({ towerList, setTowerList }: any) => {
       carriers,
       supportedOS,
     };
-    console.log("Submitting:", formData);
     const registerTower = async () => {
       try {
         await axios.post("http://localhost:8000/api/register-tower", {
