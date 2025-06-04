@@ -2,6 +2,9 @@
 
 This document describes the high level design of **Telecom Mission Control**.
 
+<img width="1146" alt="image" src="https://github.com/user-attachments/assets/f0c27c82-1707-4204-a782-a0128909a1bd" />
+
+
 ## Functional Requirements
 - Provide dashboards summarizing carrier activity, towers and devices.
 - Allow registration of towers to carriers.
