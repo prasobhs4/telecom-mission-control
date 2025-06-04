@@ -15,13 +15,18 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { getUser } from "../utils/util";
 import { fetchUserLogs } from "../../store/userlogs/logThunks";
-import { RootState, AppDispatch } from "../../store/store";
+
+type LogEntry = {
+  userId: string;
+  action: string;
+  timestamp: string;
+};
 
 const UserActionLog: React.FC = () => {
   const [fromDate, setFromDate] = useState("2025-05-31");
   const [toDate, setToDate] = useState("2025-06-01");
-  const dispatch = useDispatch<AppDispatch>();
-  const logs = useSelector((state: RootState) => state.logs);
+  const dispatch = useDispatch();
+  const logs = useSelector((state: any) => state.logs);
   const [loading, setLoading] = useState(false);
 
   const handleRetrieveLogs = async () => {

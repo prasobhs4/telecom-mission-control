@@ -1,10 +1,8 @@
 import { useSelector } from "react-redux";
 import { Card, CardContent, Typography, Grid, Box } from "@mui/material";
-import { RootState } from "../../store/store";
-import { TowerStatus } from "../../types/carrierType";
 
 const Dashboard = () => {
-  const dashboard = useSelector((state: RootState) => state.dashboard);
+  const dashboard = useSelector((state: any) => state.dashboard);
 
   return (
     <Box sx={{ padding: 5 }}>
@@ -87,7 +85,7 @@ const Dashboard = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {dashboard.towerStatuses.map((t: TowerStatus) => {
+                  {dashboard.towerStatuses.map((t) => {
                     return (
                       <tr key={t.id}>
                         <td

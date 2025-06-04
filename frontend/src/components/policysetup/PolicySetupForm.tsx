@@ -13,8 +13,6 @@ import {
 import { useSelector, useDispatch } from "react-redux";
 import { savePolicy } from "../../store/policy/policyThunks";
 import { setPolicyApplied } from "../../store/policy/policyActions";
-import { RootState, AppDispatch } from "../../store/store";
-import { PolicyPayload } from "../../types/carrierType";
 
 const POLICY_TYPES = [
   "Administrative",
@@ -42,9 +40,9 @@ const PolicySetupForm: React.FC = () => {
     "Block Restricted Apps": false,
     "Block Jailbreak/Root Detection": false,
   });
-  const user = useSelector((state: RootState) => state.user);
+  const user = useSelector((state: any) => state.user);
 
-  const dispatch = useDispatch<AppDispatch>();
+  const dispatch = useDispatch();
   useEffect(() => {
     dispatch(setPolicyApplied(false));
   }, [dispatch]);
@@ -57,7 +55,7 @@ const PolicySetupForm: React.FC = () => {
   };
 
   const handleSubmit = async () => {
-    const payload: Omit<PolicyPayload, "user" | "carrier"> = {
+    const payload = {
       policyName,
       policyType,
       apply: toggles,

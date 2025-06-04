@@ -1,8 +1,11 @@
-import { createReducer, PayloadAction } from "@reduxjs/toolkit";
+import { createReducer } from "@reduxjs/toolkit";
 import { setUser, clearUser } from "./userActions";
-import { User } from "../../types/carrierType";
 
-type UserState = User;
+interface UserState {
+  username: string;
+  password: string;
+  carrier: string;
+}
 
 const initialState: UserState = {
   username: "",
@@ -12,7 +15,7 @@ const initialState: UserState = {
 
 const userReducer = createReducer(initialState, (builder) => {
   builder
-    .addCase(setUser, (state, action: PayloadAction<User>) => {
+    .addCase(setUser, (state, action: any) => {
       state.username = action.payload.username;
       state.password = action.payload.password;
       state.carrier = action.payload.carrier;

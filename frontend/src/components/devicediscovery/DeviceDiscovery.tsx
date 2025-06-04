@@ -10,21 +10,17 @@ import {
 import { useSelector, useDispatch } from "react-redux";
 import { fetchDevices, simulateDevice } from "../../store/device/deviceThunks";
 import { generateRandomDevice } from "../utils/util";
-import { RootState, AppDispatch } from "../../store/store";
-import { Device } from "../../types/carrierType";
 
 const DeviceDiscovery: React.FC = () => {
   const [towerId, setTowerId] = useState("");
   const [location, setLocation] = useState("");
   const [coverageRadius, setCoverageRadius] = useState("");
   const [macAddress, setMacAddress] = useState("");
-  const [searchResult, setSearchResult] = useState<Device | null>(null);
-  const dispatch = useDispatch<AppDispatch>();
-  const user = useSelector((state: RootState) => state.user);
-  const discoveredDevices = useSelector(
-    (state: RootState) => state.device.discovered
-  );
-  const simulate = useSelector((state: RootState) => state.device.simulated);
+  const [searchResult, setSearchResult] = useState<any | null>(null);
+  const dispatch = useDispatch();
+  const user = useSelector((state: any) => state.user);
+  const discoveredDevices = useSelector((state: any) => state.device.discovered);
+  const simulate = useSelector((state: any) => state.device.simulated);
 
   const handleReset = () => {
     setTowerId("");
@@ -40,7 +36,7 @@ const DeviceDiscovery: React.FC = () => {
   }, [dispatch, simulate]);
 
   const handleSimulateDiscovery = async () => {
-    const newDevice: Device = { ...generateRandomDevice(), user };
+    const newDevice = { ...generateRandomDevice(), user };
     dispatch(simulateDevice(newDevice));
     alert(`Device registered: ${newDevice.ip} / ${newDevice.mac}`);
   };
@@ -48,7 +44,7 @@ const DeviceDiscovery: React.FC = () => {
 
   const handleSearch = () => {
     const match = discoveredDevices.find(
-      (d: Device) => d.ip === towerId || d.mac === macAddress
+      (d) => d.ip === towerId || d.mac === macAddress
     );
     setSearchResult(match || null);
   };

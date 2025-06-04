@@ -14,15 +14,14 @@ import {
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { getUserName } from "../utils/util";
-import { RootState } from "../../store/store";
 
 const drawerWidth = 240;
 
-const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const Layout: React.FC<{ children: React.ReactNode }> = ({ children }: any) => {
   const location = useLocation();
   const isLoginPage = location.pathname === "/";
   const navigate = useNavigate();
-  const { user } = useSelector((state: RootState) => state);
+  const { user } = useSelector((state: any) => state);
   const username = getUserName(user);
 
   const handleLogout = () => {
