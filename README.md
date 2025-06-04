@@ -69,6 +69,7 @@ Tower Registration Form:
 <img width="1507" alt="image" src="https://github.com/user-attachments/assets/5a8e9e64-f568-423d-8e93-f6a49bf2f433" />
 
 Device Discovery Input:
+imulate device registration via the tower, which updates the database and reflects the changes in the recent activity log.
 <img width="1500" alt="image" src="https://github.com/user-attachments/assets/9bf70d83-3312-40e5-8e23-ed8a3606908f" />
 
 Policy Setup:
