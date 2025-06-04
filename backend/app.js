@@ -107,6 +107,8 @@ app.post("/api/simulate-device", (req, res) => {
   );
   const master = JSON.parse(fs.readFileSync("../models/master.json", "utf8"));
 
+  const carrierName = user?.carrier || "AT&T";
+
   const newDevice = {
     ip,
     mac,
@@ -114,6 +116,7 @@ app.post("/api/simulate-device", (req, res) => {
     model,
     discoveredAt: new Date().toISOString().replace("T", " ").slice(0, 19),
     status: "available",
+    carrier: carrierName,
   };
 
   devs.push(newDevice);
@@ -122,10 +125,12 @@ app.post("/api/simulate-device", (req, res) => {
     JSON.stringify(devs, null, 2)
   );
 
-  const att = master.carriers.find((c) => c.carrierName === "AT&T");
-  if (att) {
-    att.dashboard.totalDevices += 1;
-    att.recentActivity.unshift({
+  const targetCarrier = master.carriers.find(
+    (c) => c.carrierName === carrierName
+  );
+  if (targetCarrier) {
+    targetCarrier.dashboard.totalDevices += 1;
+    targetCarrier.recentActivity.unshift({
       timestamp: formatTimestamp(),
       message: `Device ${ip} registered`,
       by: user || "admin",

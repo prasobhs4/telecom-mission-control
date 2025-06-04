@@ -1,4 +1,3 @@
-import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import {
   AppBar,
@@ -18,7 +17,7 @@ import { getUserName } from "../utils/util";
 
 const drawerWidth = 240;
 
-const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const Layout: React.FC<{ children: React.ReactNode }> = ({ children }: any) => {
   const location = useLocation();
   const isLoginPage = location.pathname === "/";
   const navigate = useNavigate();

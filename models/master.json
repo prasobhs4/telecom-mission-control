@@ -15,17 +15,17 @@
           "installDate": "2025-05-15",
           "coverageRadius": 15000,
           "policy": {
-            "name": "Device Management",
-            "type": "Device Management",
+            "name": "write",
+            "type": "Administrative",
             "carrier": "AT&T",
             "settings": {
               "Allow VPN": true,
               "Allow Camera": false,
               "Allow Download": false,
-              "Block Restricted Apps": false,
+              "Block Restricted Apps": true,
               "Block Jailbreak/Root Detection": false
             },
-            "timestamp": "2025-06-03T06:08:50.889Z"
+            "timestamp": "2025-06-04T02:51:34.602Z"
           }
         },
         {
@@ -39,17 +39,17 @@
           "installDate": "2025-05-16",
           "coverageRadius": 15000,
           "policy": {
-            "name": "Device Management",
-            "type": "Device Management",
+            "name": "write",
+            "type": "Administrative",
             "carrier": "AT&T",
             "settings": {
               "Allow VPN": true,
               "Allow Camera": false,
               "Allow Download": false,
-              "Block Restricted Apps": false,
+              "Block Restricted Apps": true,
               "Block Jailbreak/Root Detection": false
             },
-            "timestamp": "2025-06-03T06:08:50.889Z"
+            "timestamp": "2025-06-04T02:51:34.602Z"
           }
         },
         {
@@ -63,17 +63,17 @@
           "installDate": "2025-05-17",
           "coverageRadius": 15000,
           "policy": {
-            "name": "Device Management",
-            "type": "Device Management",
+            "name": "write",
+            "type": "Administrative",
             "carrier": "AT&T",
             "settings": {
               "Allow VPN": true,
               "Allow Camera": false,
               "Allow Download": false,
-              "Block Restricted Apps": false,
+              "Block Restricted Apps": true,
               "Block Jailbreak/Root Detection": false
             },
-            "timestamp": "2025-06-03T06:08:50.889Z"
+            "timestamp": "2025-06-04T02:51:34.602Z"
           }
         },
         {
@@ -87,17 +87,17 @@
           "installDate": "2025-05-18",
           "coverageRadius": 20000,
           "policy": {
-            "name": "Device Management",
-            "type": "Device Management",
+            "name": "write",
+            "type": "Administrative",
             "carrier": "AT&T",
             "settings": {
               "Allow VPN": true,
               "Allow Camera": false,
               "Allow Download": false,
-              "Block Restricted Apps": false,
+              "Block Restricted Apps": true,
               "Block Jailbreak/Root Detection": false
             },
-            "timestamp": "2025-06-03T06:08:50.889Z"
+            "timestamp": "2025-06-04T02:51:34.602Z"
           }
         },
         {
@@ -111,17 +111,17 @@
           "installDate": "2025-05-19",
           "coverageRadius": 15000,
           "policy": {
-            "name": "Device Management",
-            "type": "Device Management",
+            "name": "write",
+            "type": "Administrative",
             "carrier": "AT&T",
             "settings": {
               "Allow VPN": true,
               "Allow Camera": false,
               "Allow Download": false,
-              "Block Restricted Apps": false,
+              "Block Restricted Apps": true,
               "Block Jailbreak/Root Detection": false
             },
-            "timestamp": "2025-06-03T06:08:50.889Z"
+            "timestamp": "2025-06-04T02:51:34.602Z"
           }
         },
         {
@@ -135,17 +135,17 @@
           "installDate": "2025-05-20",
           "coverageRadius": 25000,
           "policy": {
-            "name": "Device Management",
-            "type": "Device Management",
+            "name": "write",
+            "type": "Administrative",
             "carrier": "AT&T",
             "settings": {
               "Allow VPN": true,
               "Allow Camera": false,
               "Allow Download": false,
-              "Block Restricted Apps": false,
+              "Block Restricted Apps": true,
               "Block Jailbreak/Root Detection": false
             },
-            "timestamp": "2025-06-03T06:08:50.889Z"
+            "timestamp": "2025-06-04T02:51:34.602Z"
           }
         },
         {
@@ -159,17 +159,17 @@
           "installDate": "2025-05-21",
           "coverageRadius": 25000,
           "policy": {
-            "name": "Device Management",
-            "type": "Device Management",
+            "name": "write",
+            "type": "Administrative",
             "carrier": "AT&T",
             "settings": {
               "Allow VPN": true,
               "Allow Camera": false,
               "Allow Download": false,
-              "Block Restricted Apps": false,
+              "Block Restricted Apps": true,
               "Block Jailbreak/Root Detection": false
             },
-            "timestamp": "2025-06-03T06:08:50.889Z"
+            "timestamp": "2025-06-04T02:51:34.602Z"
           }
         },
         {
@@ -183,17 +183,17 @@
           "installDate": "2025-05-22",
           "coverageRadius": 15000,
           "policy": {
-            "name": "Device Management",
-            "type": "Device Management",
+            "name": "write",
+            "type": "Administrative",
             "carrier": "AT&T",
             "settings": {
               "Allow VPN": true,
               "Allow Camera": false,
               "Allow Download": false,
-              "Block Restricted Apps": false,
+              "Block Restricted Apps": true,
               "Block Jailbreak/Root Detection": false
             },
-            "timestamp": "2025-06-03T06:08:50.889Z"
+            "timestamp": "2025-06-04T02:51:34.602Z"
           }
         },
         {
@@ -212,17 +212,17 @@
             "Windows"
           ],
           "policy": {
-            "name": "Device Management",
-            "type": "Device Management",
+            "name": "write",
+            "type": "Administrative",
             "carrier": "AT&T",
             "settings": {
               "Allow VPN": true,
               "Allow Camera": false,
               "Allow Download": false,
-              "Block Restricted Apps": false,
+              "Block Restricted Apps": true,
               "Block Jailbreak/Root Detection": false
             },
-            "timestamp": "2025-06-03T06:08:50.889Z"
+            "timestamp": "2025-06-04T02:51:34.602Z"
           }
         },
         {
@@ -241,17 +241,17 @@
             "Windows"
           ],
           "policy": {
-            "name": "Device Management",
-            "type": "Device Management",
+            "name": "write",
+            "type": "Administrative",
             "carrier": "AT&T",
             "settings": {
               "Allow VPN": true,
               "Allow Camera": false,
               "Allow Download": false,
-              "Block Restricted Apps": false,
+              "Block Restricted Apps": true,
               "Block Jailbreak/Root Detection": false
             },
-            "timestamp": "2025-06-03T06:08:50.889Z"
+            "timestamp": "2025-06-04T02:51:34.602Z"
           }
         },
         {
@@ -270,17 +270,17 @@
           ],
           "status": "ACTIVE",
           "policy": {
-            "name": "Device Management",
-            "type": "Device Management",
+            "name": "write",
+            "type": "Administrative",
             "carrier": "AT&T",
             "settings": {
               "Allow VPN": true,
               "Allow Camera": false,
               "Allow Download": false,
-              "Block Restricted Apps": false,
+              "Block Restricted Apps": true,
               "Block Jailbreak/Root Detection": false
             },
-            "timestamp": "2025-06-03T06:08:50.889Z"
+            "timestamp": "2025-06-04T02:51:34.602Z"
           }
         },
         {
@@ -297,17 +297,17 @@
           ],
           "status": "ACTIVE",
           "policy": {
-            "name": "Device Management",
-            "type": "Device Management",
+            "name": "write",
+            "type": "Administrative",
             "carrier": "AT&T",
             "settings": {
               "Allow VPN": true,
               "Allow Camera": false,
               "Allow Download": false,
-              "Block Restricted Apps": false,
+              "Block Restricted Apps": true,
               "Block Jailbreak/Root Detection": false
             },
-            "timestamp": "2025-06-03T06:08:50.889Z"
+            "timestamp": "2025-06-04T02:51:34.602Z"
           }
         },
         {
@@ -325,17 +325,17 @@
           ],
           "status": "ACTIVE",
           "policy": {
-            "name": "Device Management",
-            "type": "Device Management",
+            "name": "write",
+            "type": "Administrative",
             "carrier": "AT&T",
             "settings": {
               "Allow VPN": true,
               "Allow Camera": false,
               "Allow Download": false,
-              "Block Restricted Apps": false,
+              "Block Restricted Apps": true,
               "Block Jailbreak/Root Detection": false
             },
-            "timestamp": "2025-06-03T06:08:50.889Z"
+            "timestamp": "2025-06-04T02:51:34.602Z"
           }
         },
         {
@@ -354,17 +354,17 @@
           ],
           "status": "ACTIVE",
           "policy": {
-            "name": "Device Management",
-            "type": "Device Management",
+            "name": "write",
+            "type": "Administrative",
             "carrier": "AT&T",
             "settings": {
               "Allow VPN": true,
               "Allow Camera": false,
               "Allow Download": false,
-              "Block Restricted Apps": false,
+              "Block Restricted Apps": true,
               "Block Jailbreak/Root Detection": false
             },
-            "timestamp": "2025-06-03T06:08:50.889Z"
+            "timestamp": "2025-06-04T02:51:34.602Z"
           }
         },
         {
@@ -382,17 +382,17 @@
           ],
           "status": "ACTIVE",
           "policy": {
-            "name": "Device Management",
-            "type": "Device Management",
+            "name": "write",
+            "type": "Administrative",
             "carrier": "AT&T",
             "settings": {
               "Allow VPN": true,
               "Allow Camera": false,
               "Allow Download": false,
-              "Block Restricted Apps": false,
+              "Block Restricted Apps": true,
               "Block Jailbreak/Root Detection": false
             },
-            "timestamp": "2025-06-03T06:08:50.889Z"
+            "timestamp": "2025-06-04T02:51:34.602Z"
           }
         },
         {
@@ -411,17 +411,17 @@
           ],
           "status": "ACTIVE",
           "policy": {
-            "name": "Device Management",
-            "type": "Device Management",
+            "name": "write",
+            "type": "Administrative",
             "carrier": "AT&T",
             "settings": {
               "Allow VPN": true,
               "Allow Camera": false,
               "Allow Download": false,
-              "Block Restricted Apps": false,
+              "Block Restricted Apps": true,
               "Block Jailbreak/Root Detection": false
             },
-            "timestamp": "2025-06-03T06:08:50.889Z"
+            "timestamp": "2025-06-04T02:51:34.602Z"
           }
         },
         {
@@ -440,17 +440,17 @@
           ],
           "status": "ACTIVE",
           "policy": {
-            "name": "Device Management",
-            "type": "Device Management",
+            "name": "write",
+            "type": "Administrative",
             "carrier": "AT&T",
             "settings": {
               "Allow VPN": true,
               "Allow Camera": false,
               "Allow Download": false,
-              "Block Restricted Apps": false,
+              "Block Restricted Apps": true,
               "Block Jailbreak/Root Detection": false
             },
-            "timestamp": "2025-06-03T06:08:50.889Z"
+            "timestamp": "2025-06-04T02:51:34.602Z"
           }
         },
         {
@@ -467,17 +467,17 @@
           ],
           "status": "ACTIVE",
           "policy": {
-            "name": "Device Management",
-            "type": "Device Management",
+            "name": "write",
+            "type": "Administrative",
             "carrier": "AT&T",
             "settings": {
               "Allow VPN": true,
               "Allow Camera": false,
               "Allow Download": false,
-              "Block Restricted Apps": false,
+              "Block Restricted Apps": true,
               "Block Jailbreak/Root Detection": false
             },
-            "timestamp": "2025-06-03T06:08:50.889Z"
+            "timestamp": "2025-06-04T02:51:34.602Z"
           }
         },
         {
@@ -494,17 +494,17 @@
           ],
           "status": "ACTIVE",
           "policy": {
-            "name": "Device Management",
-            "type": "Device Management",
+            "name": "write",
+            "type": "Administrative",
             "carrier": "AT&T",
             "settings": {
               "Allow VPN": true,
               "Allow Camera": false,
               "Allow Download": false,
-              "Block Restricted Apps": false,
+              "Block Restricted Apps": true,
               "Block Jailbreak/Root Detection": false
             },
-            "timestamp": "2025-06-03T06:08:50.889Z"
+            "timestamp": "2025-06-04T02:51:34.602Z"
           }
         },
         {
@@ -526,7 +526,20 @@
             "password": "dasdasdasd",
             "carrier": "AT&T"
           },
-          "status": "ACTIVE"
+          "status": "ACTIVE",
+          "policy": {
+            "name": "write",
+            "type": "Administrative",
+            "carrier": "AT&T",
+            "settings": {
+              "Allow VPN": true,
+              "Allow Camera": false,
+              "Allow Download": false,
+              "Block Restricted Apps": true,
+              "Block Jailbreak/Root Detection": false
+            },
+            "timestamp": "2025-06-04T02:51:34.602Z"
+          }
         },
         {
           "id": "TWR567890",
@@ -546,7 +559,20 @@
             "password": "dasdasdasd",
             "carrier": "AT&T"
           },
-          "status": "ACTIVE"
+          "status": "ACTIVE",
+          "policy": {
+            "name": "write",
+            "type": "Administrative",
+            "carrier": "AT&T",
+            "settings": {
+              "Allow VPN": true,
+              "Allow Camera": false,
+              "Allow Download": false,
+              "Block Restricted Apps": true,
+              "Block Jailbreak/Root Detection": false
+            },
+            "timestamp": "2025-06-04T02:51:34.602Z"
+          }
         },
         {
           "id": "TWR000000",
@@ -567,7 +593,20 @@
             "password": "dasdasdasd",
             "carrier": "AT&T"
           },
-          "status": "ACTIVE"
+          "status": "ACTIVE",
+          "policy": {
+            "name": "write",
+            "type": "Administrative",
+            "carrier": "AT&T",
+            "settings": {
+              "Allow VPN": true,
+              "Allow Camera": false,
+              "Allow Download": false,
+              "Block Restricted Apps": true,
+              "Block Jailbreak/Root Detection": false
+            },
+            "timestamp": "2025-06-04T02:51:34.602Z"
+          }
         },
         {
           "id": "TWR901234",
@@ -588,16 +627,94 @@
             "password": "asdasdasd",
             "carrier": "Verizon"
           },
-          "status": "ACTIVE"
+          "status": "ACTIVE",
+          "policy": {
+            "name": "write",
+            "type": "Administrative",
+            "carrier": "AT&T",
+            "settings": {
+              "Allow VPN": true,
+              "Allow Camera": false,
+              "Allow Download": false,
+              "Block Restricted Apps": true,
+              "Block Jailbreak/Root Detection": false
+            },
+            "timestamp": "2025-06-04T02:51:34.602Z"
+          }
+        },
+        {
+          "id": "TWR892828",
+          "location": "california",
+          "towerType": "Lattice",
+          "installationDate": "2020-01-01",
+          "coverageRadius": "500",
+          "carriers": [
+            "AT&T"
+          ],
+          "supportedOS": [
+            "iOS",
+            "Windows"
+          ],
+          "user": {
+            "username": "athira@att.com",
+            "password": "dasdasd",
+            "carrier": "AT&T"
+          },
+          "status": "ACTIVE",
+          "policy": {
+            "name": "write",
+            "type": "Administrative",
+            "carrier": "AT&T",
+            "settings": {
+              "Allow VPN": true,
+              "Allow Camera": false,
+              "Allow Download": false,
+              "Block Restricted Apps": true,
+              "Block Jailbreak/Root Detection": false
+            },
+            "timestamp": "2025-06-04T02:51:34.602Z"
+          }
         }
       ],
       "dashboard": {
         "activeTowers": 3,
-        "totalDevices": 80025,
+        "totalDevices": 80027,
         "users": 50000,
         "securityAlerts": 5
       },
       "recentActivity": [
+        {
+          "timestamp": "2025-06-03 20:03:43",
+          "message": "Device 73.194.192.6 registered",
+          "by": {
+            "username": "athira@att.com",
+            "password": "dasdasdasd",
+            "carrier": "AT&T"
+          }
+        },
+        {
+          "timestamp": "6/3/2025, 7:51:34 PM",
+          "message": "Policy \"write\" applied to carrier \"AT&T\"",
+          "by": "athira@att.com"
+        },
+        {
+          "timestamp": "2025-06-03 19:44:57",
+          "message": "Device 78.114.224.48 registered",
+          "by": {
+            "username": "athira@att.com",
+            "password": "dasdasd",
+            "carrier": "AT&T"
+          }
+        },
+        {
+          "timestamp": "2025-06-03 19:44:21",
+          "message": "TWR892828 Registered",
+          "by": {
+            "username": "athira@att.com",
+            "password": "dasdasd",
+            "carrier": "AT&T"
+          }
+        },
         {
           "timestamp": "2025-06-03 08:00:44",
           "message": "TWR901234 Registered",
@@ -909,17 +1026,17 @@
         }
       ],
       "policy": {
-        "name": "Device Management",
-        "type": "Device Management",
+        "name": "write",
+        "type": "Administrative",
         "carrier": "AT&T",
         "settings": {
           "Allow VPN": true,
           "Allow Camera": false,
           "Allow Download": false,
-          "Block Restricted Apps": false,
+          "Block Restricted Apps": true,
           "Block Jailbreak/Root Detection": false
         },
-        "timestamp": "2025-06-03T06:08:50.889Z"
+        "timestamp": "2025-06-04T02:51:34.602Z"
       }
     },
     {
@@ -1281,15 +1398,54 @@
             "carrier": "AT&T"
           },
           "status": "ACTIVE"
+        },
+        {
+          "id": "TWR567890",
+          "location": "utah",
+          "towerType": "Lattice",
+          "installationDate": "2026-01-01",
+          "coverageRadius": "500",
+          "carriers": [
+            "Verizon"
+          ],
+          "supportedOS": [
+            "iOS",
+            "Android",
+            "Windows"
+          ],
+          "user": {
+            "username": "dasd@verizon.com",
+            "password": "dasdasd",
+            "carrier": "Verizon"
+          },
+          "status": "ACTIVE"
         }
       ],
       "dashboard": {
         "activeTowers": 1,
-        "totalDevices": 30000,
+        "totalDevices": 30001,
         "users": 15000,
         "securityAlerts": 0
       },
       "recentActivity": [
+        {
+          "timestamp": "2025-06-03 20:12:36",
+          "message": "Device 13.91.222.248 registered",
+          "by": {
+            "username": "dasd@verizon.com",
+            "password": "dasdasd",
+            "carrier": "Verizon"
+          }
+        },
+        {
+          "timestamp": "2025-06-03 20:12:24",
+          "message": "TWR567890 Registered",
+          "by": {
+            "username": "dasd@verizon.com",
+            "password": "dasdasd",
+            "carrier": "Verizon"
+          }
+        },
         {
           "timestamp": "2025-06-03 06:25:50",
           "message": "TWR555555 Registered",
@@ -1495,9 +1651,27 @@
         "Block Jailbreak/Root Detection": false
       },
       "timestamp": "2025-06-03T06:08:50.889Z"
+    },
+    {
+      "name": "write",
+      "type": "Administrative",
+      "carrier": "AT&T",
+      "settings": {
+        "Allow VPN": true,
+        "Allow Camera": false,
+        "Allow Download": false,
+        "Block Restricted Apps": true,
+        "Block Jailbreak/Root Detection": false
+      },
+      "timestamp": "2025-06-04T02:51:34.602Z"
     }
   ],
   "recentActivity": [
+    {
+      "timestamp": "6/3/2025, 7:51:34 PM",
+      "message": "Policy \"write\" applied to carrier \"AT&T\"",
+      "by": "athira@att.com"
+    },
     {
       "timestamp": "6/2/2025, 11:08:50 PM",
       "message": "Policy \"Device Management\" applied to carrier \"AT&T\"",

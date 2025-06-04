@@ -222,5 +222,30 @@
     "model": "E77",
     "discoveredAt": "2025-06-03 15:00:05",
     "status": "available"
+  },
+  {
+    "ip": "78.114.224.48",
+    "mac": "FC-AF-CC-79-89-2B",
+    "vendor": "Nokia",
+    "model": "Titan",
+    "discoveredAt": "2025-06-04 02:44:57",
+    "status": "available"
+  },
+  {
+    "ip": "73.194.192.6",
+    "mac": "30-15-16-17-40-A3",
+    "vendor": "Huawei",
+    "model": "NX9000",
+    "discoveredAt": "2025-06-04 03:03:43",
+    "status": "available"
+  },
+  {
+    "ip": "13.91.222.248",
+    "mac": "C0-65-1D-D8-43-0F",
+    "vendor": "Ericsson",
+    "model": "Raptor5",
+    "discoveredAt": "2025-06-04 03:12:36",
+    "status": "available",
+    "carrier": "Verizon"
   }
 ]
