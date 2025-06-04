@@ -32,12 +32,13 @@ Progressive Web App (PWA) so users can access data even without a network connec
    cd backend && npm install
    cd ../frontend && npm install
    ```
-2. Start the development environment (runs server and client concurrently):
+2. Copy `.env.example` to `.env` and update any values if required.
+3. Start the development environment (runs server and client concurrently):
    ```bash
    npm start
    ```
    The API server will run on `http://localhost:8000` and the client on `http://localhost:5173`.
-3. For a production build with offline capability:
+4. For a production build with offline capability:
    ```bash
    cd frontend && npm run build
    ```
