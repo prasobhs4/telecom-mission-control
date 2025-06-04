@@ -307,6 +307,40 @@ app.get("/api/user-logs", async (req, res) => {
   }
 });
 
+app.post(
+  "/api/upgrade",
+  [body("carrier", "carrier is required").notEmpty()],
+  async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ error: errors.array()[0].msg });
+    }
+
+    const { carrier } = req.body;
+
+    try {
+      const master = JSON.parse(
+        await fs.readFile("../models/master.json", "utf8")
+      );
+      const targetCarrier = master.carriers.find(
+        (c) => c.carrierName === carrier
+      );
+
+      if (!targetCarrier)
+        return res.status(404).json({ error: "Carrier not found" });
+
+      targetCarrier.dashboard.securityAlerts = 0;
+
+      await fs.writeFile("../models/master.json", JSON.stringify(master, null, 2));
+
+      res.sendStatus(200);
+    } catch (err) {
+      console.error("Upgrade error:", err);
+      res.status(500).json({ error: "Failed to upgrade." });
+    }
+  }
+);
+
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
   if (DB_HOST) {

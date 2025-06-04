@@ -21,6 +21,7 @@ const App = () => {
   const towerList = useSelector((state: any) => state.towers);
   const simulate = useSelector((state: any) => state.device.simulated);
   const policy = useSelector((state: any) => state.policy.applied);
+  const premium = useSelector((state: any) => state.premium.upgraded);
 
   const fetchApi = (carrier: string) => {
     dispatch(fetchDashboard(carrier));
@@ -28,7 +29,7 @@ const App = () => {
 
   useEffect(() => {
     if (carrier) fetchApi(carrier);
-  }, [carrier, towerList, simulate, policy]);
+  }, [carrier, towerList, simulate, policy, premium]);
 
   return (
     <Router>
