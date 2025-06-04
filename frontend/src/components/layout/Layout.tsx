@@ -99,8 +99,8 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }: any) => {
           </Stack>
           <Stack direction="row" spacing={2} alignItems="center">
             <Typography
-              variant="h9"
-              style={{ fontSize: "12px", padding: "10px" }}
+              variant="body2"
+              sx={{ fontSize: "12px", p: "10px" }}
             >{`Hi , ${username?.toUpperCase()}`}</Typography>
             <Button color="inherit" onClick={handleUpgrade} disabled={isPremium}>
               {isPremium ? "Premium User" : "Upgrade to Premium"}
