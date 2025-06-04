@@ -16,9 +16,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { getUser } from "../utils/util";
 import { fetchUserLogs } from "../../store/userlogs/logThunks";
 import { RootState, AppDispatch } from "../../store/store";
-import { LogEntry } from "../../types/carrierType";
-
-
 
 const UserActionLog: React.FC = () => {
   const [fromDate, setFromDate] = useState("2025-05-31");
@@ -33,9 +30,7 @@ const UserActionLog: React.FC = () => {
       const user = JSON.parse(localStorage.getItem("user") || "{}");
       const carrier = user.carrier || "AT&T"; // fallback
 
-      await dispatch(
-        fetchUserLogs({ carrier, start: fromDate, end: toDate })
-      );
+      await dispatch(fetchUserLogs({ carrier, start: fromDate, end: toDate }));
     } catch (error) {
       console.error("Failed to fetch logs", error);
       alert("Unable to retrieve user logs.");
