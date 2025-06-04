@@ -13,15 +13,14 @@ import TowerRegistrationForm from "./components/registration/TowerRegistrationFo
 import DeviceDiscovery from "./components/devicediscovery/DeviceDiscovery";
 import PolicySetupForm from "./components/policysetup/PolicySetupForm";
 import UserActionLog from "./components/useraction/UserActionLog";
-import { AppState } from "./types/carrierType";
 
 const App = () => {
-  const user = useSelector((state: AppState) => state.user);
+  const user = useSelector((state: any) => state.user);
   const carrier = getCarrierDetails(user);
   const dispatch = useDispatch();
-  const towerList = useSelector((state: AppState) => state.towers);
-  const simulate = useSelector((state: AppState) => state.device.simulated);
-  const policy = useSelector((state: AppState) => state.policy.applied);
+  const towerList = useSelector((state: any) => state.towers);
+  const simulate = useSelector((state: any) => state.device.simulated);
+  const policy = useSelector((state: any) => state.policy.applied);
 
   const fetchApi = (carrier: string) => {
     dispatch(fetchDashboard(carrier));
