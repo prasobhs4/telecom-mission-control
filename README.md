@@ -2,8 +2,9 @@
 
 Telecom Mission Control is a sample SaaS platform for managing cell towers, devices and carrier operations.
 It provides a dashboard, tower registration, device discovery and policy management tools. The app is
-designed to work globally and offline with full accessibility support. The frontend is implemented as a
-Progressive Web App (PWA) so users can access data even without a network connection.
+designed to work globally and offline with full accessibility support. The frontend is implemented as a Progressive Web App (PWA) so users can access data even without a network connection.
+
+For an architectural overview see [docs/SYSTEM_DESIGN.md](docs/SYSTEM_DESIGN.md).
 
 ## Features
 
