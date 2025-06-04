@@ -247,5 +247,41 @@
     "discoveredAt": "2025-06-04 03:12:36",
     "status": "available",
     "carrier": "Verizon"
+  },
+  {
+    "ip": "96.79.39.74",
+    "mac": "D3-C7-CE-F8-53-22",
+    "vendor": "Nokia",
+    "model": "NX9000",
+    "discoveredAt": "2025-06-04 04:58:21",
+    "status": "available",
+    "carrier": "admin"
+  },
+  {
+    "ip": "131.108.136.105",
+    "mac": "D5-47-3F-75-1A-99",
+    "vendor": "Ericsson",
+    "model": "NX9000",
+    "discoveredAt": "2025-06-04 04:58:29",
+    "status": "available",
+    "carrier": "admin"
+  },
+  {
+    "ip": "243.174.216.31",
+    "mac": "62-A3-42-C3-1F-15",
+    "vendor": "Huawei",
+    "model": "X100",
+    "discoveredAt": "2025-06-04 05:07:50",
+    "status": "available",
+    "carrier": "AT&T"
+  },
+  {
+    "ip": "92.244.93.108",
+    "mac": "C4-93-61-B6-22-AC",
+    "vendor": "Nokia",
+    "model": "NX9000",
+    "discoveredAt": "2025-06-04 05:08:03",
+    "status": "available",
+    "carrier": "AT&T"
   }
 ]
