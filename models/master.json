@@ -568,15 +568,54 @@
             "carrier": "AT&T"
           },
           "status": "ACTIVE"
+        },
+        {
+          "id": "TWR901234",
+          "location": "california",
+          "towerType": "Guyed",
+          "installationDate": "2020-01-01",
+          "coverageRadius": "500",
+          "carriers": [
+            "AT&T"
+          ],
+          "supportedOS": [
+            "iOS",
+            "Android",
+            "Windows"
+          ],
+          "user": {
+            "username": "AT1234@verizon.com",
+            "password": "asdasdasd",
+            "carrier": "Verizon"
+          },
+          "status": "ACTIVE"
         }
       ],
       "dashboard": {
         "activeTowers": 3,
-        "totalDevices": 80024,
+        "totalDevices": 80025,
         "users": 50000,
         "securityAlerts": 5
       },
       "recentActivity": [
+        {
+          "timestamp": "2025-06-03 08:00:44",
+          "message": "TWR901234 Registered",
+          "by": {
+            "username": "AT1234@verizon.com",
+            "password": "asdasdasd",
+            "carrier": "Verizon"
+          }
+        },
+        {
+          "timestamp": "2025-06-03 08:00:05",
+          "message": "Device 236.116.216.232 registered",
+          "by": {
+            "username": "AT1234@verizon.com",
+            "password": "asdasdasd",
+            "carrier": "Verizon"
+          }
+        },
         {
           "timestamp": "2025-06-03 06:27:27",
           "message": "Device 22.182.32.240 registered",

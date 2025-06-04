@@ -214,5 +214,13 @@
     "model": "E77",
     "discoveredAt": "2025-06-03 06:27:27",
     "status": "available"
+  },
+  {
+    "ip": "236.116.216.232",
+    "mac": "04-16-CA-D8-17-70",
+    "vendor": "Nokia",
+    "model": "E77",
+    "discoveredAt": "2025-06-03 15:00:05",
+    "status": "available"
   }
 ]
