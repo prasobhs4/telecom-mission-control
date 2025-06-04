@@ -1,4 +1,5 @@
 import { carriers } from "../../constants/constants";
+import { CarrierList, Dashboard, TowerStatus, Activity } from "../../types/carrierType";
 
 export const getCarrierDetails = (
   user: {
@@ -27,15 +28,16 @@ export const getUserName = (
   return userName;
 };
 
-export const formatCarrierData = (carrierList: any) => {
+
+export const formatCarrierData = (carrierList: CarrierList): Dashboard => {
   let activeTowers = 0;
   let totalDevices = 0;
   let users = 0;
   let securityAlerts = 0;
-  const towerStatuses: any = [];
-  const recentActivity: any = [];
+  const towerStatuses: TowerStatus[] = [];
+  const recentActivity: Activity[] = [];
 
-  carrierList.forEach((carrier: any) => {
+  carrierList.forEach((carrier) => {
     activeTowers += carrier.dashboard.activeTowers;
     totalDevices += carrier.dashboard.totalDevices;
     users += carrier.dashboard.users;

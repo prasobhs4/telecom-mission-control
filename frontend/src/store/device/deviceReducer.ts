@@ -1,10 +1,6 @@
 import { createReducer } from "@reduxjs/toolkit";
 import { setDiscoveredDevices, setSimulatedDevice } from "./deviceActions";
-
-interface DeviceState {
-  discovered: any[];
-  simulated: any | null;
-}
+import { DeviceState } from "../../types/carrierType";
 
 const initialState: DeviceState = {
   discovered: [],
