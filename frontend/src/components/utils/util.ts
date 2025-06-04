@@ -1,5 +1,4 @@
 import { carriers } from "../../constants/constants";
-// import { RecentActivity, Tower } from "../../types/carrierType";
 
 export const getCarrierDetails = (
   user: {

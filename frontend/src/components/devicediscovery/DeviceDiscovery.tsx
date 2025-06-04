@@ -60,7 +60,6 @@ const DeviceDiscovery: React.FC = ({ simulate, setSimulate }: any) => {
     const match = discoveredDevices.find(
       (d) => d.ip === towerId || d.mac === macAddress
     );
-    console.log("match found", discoveredDevices);
     setSearchResult(match || null);
   };
 
@@ -130,9 +129,6 @@ const DeviceDiscovery: React.FC = ({ simulate, setSimulate }: any) => {
             <Typography>IP: {searchResult.ip}</Typography>
             <Typography>MAC: {searchResult.mac}</Typography>
             <Typography>Carrier: {searchResult.carrier}</Typography>
-            <Typography>
-              {/* Supported OS: {searchResult.supportedOS.join(", ")} */}
-            </Typography>
             <Typography>Status: {searchResult.status}</Typography>
           </Paper>
         </>
