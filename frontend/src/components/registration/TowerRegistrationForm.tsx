@@ -86,127 +86,117 @@ const TowerRegistrationForm: React.FC = () => {
   };
 
   return (
-    <Box sx={{ px: 6, py: 4, maxWidth: "1000px", margin: "0 auto" }}>
+    <Box sx={{ px: { xs: 2, sm: 6 }, py: 4, maxWidth: "1000px", margin: "0 auto" }}>
       <Typography variant="h4" sx={{ mb: 4 }}>
         Register a New Tower
       </Typography>
 
-      <Grid size={8}>
-        <Autocomplete
-          options={towerList}
-          value={id}
-          onChange={(event: any, newValue: string | null) => {
-            setTowerId(newValue || "");
-          }}
-          renderInput={(params: any) => (
-            <TextField
-              {...params}
-              fullWidth
-              label="Tower ID"
-              variant="outlined"
-              value={id}
-              onClick={(e) => setTowerId(e.target.value)}
-            />
-          )}
-        />
-        <Box sx={{ pt: 4 }}>
-          <Grid item xs={12} sm={8}>
-            <FormControl fullWidth>
-              <InputLabel>Tower Type</InputLabel>
-              <Select
-                value={towerType}
-                onChange={(e) => setTowerType(e.target.value)}
-                label="Tower Type"
-              >
-                {TOWER_TYPES.map((type) => (
-                  <MenuItem key={type} value={type}>
-                    {type}
-                  </MenuItem>
-                ))}
-              </Select>
-            </FormControl>
-          </Grid>
-        </Box>
-
-        <Box sx={{ pt: 4 }}>
-          <Grid item xs={12} sm={4}>
-            <TextField
-              fullWidth
-              label="Location"
-              value={location}
-              onChange={(e) => setLocation(e.target.value)}
-            />
-          </Grid>
-        </Box>
-
-        <Box sx={{ pt: 4 }}>
-          <Grid item xs={12} sm={4}>
-            <TextField
-              fullWidth
-              type="date"
-              label="Installation Date"
-              value={installationDate}
-              InputLabelProps={{ shrink: true }}
-              onChange={(e) => setInstallationDate(e.target.value)}
-            />
-          </Grid>
-        </Box>
-
-        <Box sx={{ pt: 4 }}>
-          <Grid item xs={12} sm={4}>
-            <Typography variant="subtitle1" sx={{ mb: 1 }}>
-              Supported Carriers
-            </Typography>
-            <Box sx={{ display: "flex", gap: 1 }}>
-              {CARRIER_OPTIONS.map((carrier) => (
-                <Chip
-                  key={carrier}
-                  label={carrier}
-                  clickable
-                  onClick={() => handleCarrierToggle(carrier)}
-                  variant={carriers.includes(carrier) ? "filled" : "outlined"}
-                  color={carriers.includes(carrier) ? "primary" : "default"}
-                />
+      <Grid container spacing={4}>
+        <Grid item xs={12} sm={8}>
+          <Autocomplete
+            options={towerList}
+            value={id}
+            onChange={(event: any, newValue: string | null) => {
+              setTowerId(newValue || "");
+            }}
+            renderInput={(params: any) => (
+              <TextField
+                {...params}
+                fullWidth
+                label="Tower ID"
+                variant="outlined"
+                value={id}
+                onClick={(e) => setTowerId(e.target.value)}
+              />
+            )}
+          />
+        </Grid>
+        <Grid item xs={12} sm={8}>
+          <FormControl fullWidth>
+            <InputLabel>Tower Type</InputLabel>
+            <Select
+              value={towerType}
+              onChange={(e) => setTowerType(e.target.value)}
+              label="Tower Type"
+            >
+              {TOWER_TYPES.map((type) => (
+                <MenuItem key={type} value={type}>
+                  {type}
+                </MenuItem>
               ))}
-            </Box>
-          </Grid>
-        </Box>
+            </Select>
+          </FormControl>
+        </Grid>
 
-        <Box sx={{ pt: 4 }}>
-          <Grid item xs={12} sm={4}>
-            <TextField
-              fullWidth
-              label="Coverage Radius"
-              value={coverageRadius}
-              onChange={(e) => setCoverageRadius(e.target.value)}
-              InputProps={{
-                endAdornment: <span style={{ marginLeft: 4 }}>miles</span>,
-              }}
-            />
-          </Grid>
-        </Box>
+        <Grid item xs={12} sm={4}>
+          <TextField
+            fullWidth
+            label="Location"
+            value={location}
+            onChange={(e) => setLocation(e.target.value)}
+          />
+        </Grid>
 
-        <Box sx={{ pt: 4 }}>
-          <Grid item xs={12}>
-            <Typography variant="subtitle1" sx={{ mt: 2 }}>
-              Supported OS
-            </Typography>
-            <Box sx={{ display: "flex", gap: 3, mt: 1 }}>
-              {OS_OPTIONS.map((os) => (
-                <FormControlLabel
-                  key={os}
-                  control={
-                    <Checkbox
-                      checked={supportedOS.includes(os)}
-                      onChange={() => handleOSToggle(os)}
-                    />
-                  }
-                  label={os}
-                />
-              ))}
-            </Box>
-          </Grid>
-        </Box>
+        <Grid item xs={12} sm={4}>
+          <TextField
+            fullWidth
+            type="date"
+            label="Installation Date"
+            value={installationDate}
+            InputLabelProps={{ shrink: true }}
+            onChange={(e) => setInstallationDate(e.target.value)}
+          />
+        </Grid>
+
+        <Grid item xs={12} sm={4}>
+          <Typography variant="subtitle1" sx={{ mb: 1 }}>
+            Supported Carriers
+          </Typography>
+          <Box sx={{ display: "flex", gap: 1 }}>
+            {CARRIER_OPTIONS.map((carrier) => (
+              <Chip
+                key={carrier}
+                label={carrier}
+                clickable
+                onClick={() => handleCarrierToggle(carrier)}
+                variant={carriers.includes(carrier) ? "filled" : "outlined"}
+                color={carriers.includes(carrier) ? "primary" : "default"}
+              />
+            ))}
+          </Box>
+        </Grid>
+
+        <Grid item xs={12} sm={4}>
+          <TextField
+            fullWidth
+            label="Coverage Radius"
+            value={coverageRadius}
+            onChange={(e) => setCoverageRadius(e.target.value)}
+            InputProps={{
+              endAdornment: <span style={{ marginLeft: 4 }}>miles</span>,
+            }}
+          />
+        </Grid>
+
+        <Grid item xs={12}>
+          <Typography variant="subtitle1" sx={{ mt: 2 }}>
+            Supported OS
+          </Typography>
+          <Box sx={{ display: "flex", gap: 3, mt: 1 }}>
+            {OS_OPTIONS.map((os) => (
+              <FormControlLabel
+                key={os}
+                control={
+                  <Checkbox
+                    checked={supportedOS.includes(os)}
+                    onChange={() => handleOSToggle(os)}
+                  />
+                }
+                label={os}
+              />
+            ))}
+          </Box>
+        </Grid>
 
         <Grid item xs={12} sx={{ mt: 3, display: "flex", gap: 2 }}>
           <Button variant="contained" color="primary" onClick={handleSubmit}>

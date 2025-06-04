@@ -50,7 +50,7 @@ const DeviceDiscovery: React.FC = () => {
   };
 
   return (
-    <Box sx={{ px: 6, py: 4, maxWidth: "600px", margin: "0 auto" }}>
+    <Box sx={{ px: { xs: 2, sm: 6 }, py: 4, maxWidth: "600px", margin: "0 auto" }}>
       <Typography variant="h4" sx={{ mb: 4 }}>
         Device Discovery Input
       </Typography>
