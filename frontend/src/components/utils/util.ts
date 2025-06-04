@@ -8,8 +8,8 @@ export const getCarrierDetails = (
 ) => {
   if (!user?.username || !user.password) return null;
   const { username } = user;
-  const domain = username.split("@")[1];
-  const carrierKey = domain.split(".")[0];
+  const domainPart = username.trim().split("@")[1] || "";
+  const carrierKey = domainPart.split(".")[0].toLowerCase();
   return carriers[carrierKey];
 };
 
