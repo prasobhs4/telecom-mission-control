@@ -2,8 +2,17 @@ const express = require("express");
 const fs = require("fs");
 const cors = require("cors");
 const bodyParser = require("body-parser");
+require("dotenv").config();
+
 const app = express();
-const PORT = 8000;
+
+const {
+  PORT = 8000,
+  DB_HOST,
+  DB_USER,
+  DB_PASS,
+  DB_NAME,
+} = process.env;
 
 app.use(cors({ origin: "*" }));
 app.use(bodyParser.json());
@@ -251,6 +260,11 @@ app.get("/api/user-logs", (req, res) => {
   }
 });
 
-app.listen(PORT, () =>
-  console.log(`Server running on http://localhost:${PORT}`)
-);
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
+  if (DB_HOST) {
+    console.log(
+      `Database: ${DB_NAME || ""} at ${DB_HOST} as ${DB_USER || ""}`
+    );
+  }
+});
