@@ -5,9 +5,9 @@ const Dashboard = () => {
   const dashboard = useSelector((state: any) => state.dashboard);
 
   return (
-    <Box sx={{ p: { xs: 2, sm: 5 } }}>
+    <Box sx={{ padding: 5 }}>
       <Grid container spacing={4}>
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid size={3}>
           <Card>
             <CardContent>
               <Typography variant="h6">Active Towers</Typography>
@@ -16,7 +16,7 @@ const Dashboard = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid size={3}>
           <Card>
             <CardContent>
               <Typography variant="h6">Total Devices</Typography>
@@ -24,7 +24,7 @@ const Dashboard = () => {
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid size={3}>
           <Card>
             <CardContent>
               <Typography variant="h6">Users</Typography>
@@ -32,7 +32,7 @@ const Dashboard = () => {
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid size={3}>
           <Card>
             <CardContent>
               <Typography variant="h6">Security Alerts</Typography>
@@ -42,8 +42,8 @@ const Dashboard = () => {
         </Grid>
       </Grid>
 
-      <Grid container spacing={2} mt={{ xs: 4, sm: 10 }}>
-        <Grid item xs={12} md={4}>
+      <Grid container spacing={2} mt={10}>
+        <Grid size={4}>
           <Card sx={{ maxHeight: 400, overflowY: "auto" }}>
             <CardContent>
               <Typography
@@ -115,7 +115,7 @@ const Dashboard = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={12} md={8}>
+        <Grid size={8}>
           <Card sx={{ maxHeight: 400, overflowY: "auto" }}>
             <CardContent>
               <Typography variant="h6">Recent Activity</Typography>

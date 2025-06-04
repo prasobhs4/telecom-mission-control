@@ -85,7 +85,7 @@ const PolicySetupForm: React.FC = () => {
   };
 
   return (
-    <Box sx={{ p: { xs: 2, sm: 4 }, maxWidth: 800, mx: "auto" }}>
+    <Box sx={{ p: 4, maxWidth: 800, mx: "auto" }}>
       <Typography variant="h4" sx={{ mb: 3 }}>
         Policy Setup
       </Typography>
