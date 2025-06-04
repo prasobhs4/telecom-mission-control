@@ -12,8 +12,9 @@ import {
   Paper,
   Grid,
 } from "@mui/material";
-import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
 import { getUser } from "../utils/util";
+import { fetchUserLogs } from "../../store/userlogs/logThunks";
 
 type LogEntry = {
   userId: string;
@@ -24,7 +25,8 @@ type LogEntry = {
 const UserActionLog: React.FC = () => {
   const [fromDate, setFromDate] = useState("2025-05-31");
   const [toDate, setToDate] = useState("2025-06-01");
-  const [logs, setLogs] = useState<LogEntry[]>([]);
+  const dispatch = useDispatch();
+  const logs = useSelector((state: any) => state.logs);
   const [loading, setLoading] = useState(false);
 
   const handleRetrieveLogs = async () => {
@@ -33,15 +35,9 @@ const UserActionLog: React.FC = () => {
       const user = JSON.parse(localStorage.getItem("user") || "{}");
       const carrier = user.carrier || "AT&T"; // fallback
 
-      const response = await axios.get("http://localhost:8000/api/user-logs", {
-        params: {
-          carrier,
-          start: fromDate,
-          end: toDate,
-        },
-      });
-
-      setLogs(response.data);
+      await dispatch(
+        fetchUserLogs({ carrier, start: fromDate, end: toDate })
+      );
     } catch (error) {
       console.error("Failed to fetch logs", error);
       alert("Unable to retrieve user logs.");

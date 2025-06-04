@@ -16,14 +16,14 @@ import {
   Grid,
   Chip,
 } from "@mui/material";
-import { useSelector } from "react-redux";
-import axios from "axios";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchTowers, registerTower } from "../../store/towers/towerThunks";
 
 const CARRIER_OPTIONS = ["AT&T", "Verizon", "T-Mobile"];
 const OS_OPTIONS = ["iOS", "Android", "Windows"];
 const TOWER_TYPES = ["Monopole", "Lattice", "Guyed"];
 
-const TowerRegistrationForm: React.FC = ({ towerList, setTowerList }: any) => {
+const TowerRegistrationForm: React.FC = () => {
   const [id, setTowerId] = useState("");
 
   const [location, setLocation] = useState("");
@@ -38,19 +38,12 @@ const TowerRegistrationForm: React.FC = ({ towerList, setTowerList }: any) => {
     "Windows",
   ]);
   const user = useSelector((state: any) => state.user);
+  const towerList = useSelector((state: any) => state.towers);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    const fetchTowers = async () => {
-      try {
-        const response = await axios.get("http://localhost:8000/api/towers");
-        const ids = response.data.map((t: any) => t.towerId);
-        setTowerList(ids);
-      } catch (error) {
-        console.error("Failed to fetch towers", error);
-      }
-    };
-    fetchTowers();
-  }, []);
+    dispatch(fetchTowers());
+  }, [dispatch]);
 
   const handleCarrierToggle = (carrier: string) => {
     setCarriers((prev) =>
@@ -85,21 +78,11 @@ const TowerRegistrationForm: React.FC = ({ towerList, setTowerList }: any) => {
       coverageRadius,
       carriers,
       supportedOS,
+      user,
     };
-    const registerTower = async () => {
-      try {
-        await axios.post("http://localhost:8000/api/register-tower", {
-          ...formData,
-          user,
-        });
-        setSnackbarOpen(true);
-        setTowerList((prev) => prev.filter((t) => t.id !== id));
-        setTowerId("");
-      } catch (error) {
-        console.error("Failed to register tower", error);
-      }
-    };
-    registerTower();
+    dispatch(registerTower(formData));
+    setSnackbarOpen(true);
+    setTowerId("");
   };
 
   return (
