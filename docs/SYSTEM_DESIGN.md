@@ -26,6 +26,12 @@ The sample data represents thousands of towers and devices with tens of
 thousands of activity log entries. In production, the architecture can scale to
 many carriers each owning thousands of towers and hundreds of thousands of
 devices.
+Back-of-the-Envelope Estimates
+DAU: 1M
+QPS: ~500 (dashboard & policy fetches + logs)
+Storage (5 years):
+Devices: 5M x 5 yrs = 9 TB (indexed, compressed)
+Actions logs: 10B rows = 25 TB
 
 ## Data Models
 - **master.json** – primary store containing carriers, their towers, applied
@@ -33,12 +39,28 @@ devices.
 - **towers.json** – towers that have not yet been registered.
 - **devicediscovery.json** – discovered devices awaiting action.
 
+Tower: id, location, carriers[], capabilities[]
+Carrier: id, name, supportedDevices[], supportedOS[]
+Device: id, enterpriseId, os, status, apps[], userId
+AppAction: id, deviceId, app, action, timestamp
+Policy: id, enterpriseId, app, role, allowedActions[]
+Enterprise: id, name, plan, adminId
+User: id, enterpriseId, role
+
 ## Non-Functional Goals
 - **Reliability** – simple Express server with JSON persistence for demo
   purposes; can be replaced with a database for higher reliability.
 - **Security** – CORS enabled REST APIs with role based policy application.
 - **Scalability** – stateless APIs that can run behind a load balancer.
 - **Maintainability** – frontend and backend code are organized by feature.
+Improvements:
+Availability: 99.99% (multi-region)
+Scalability: horizontally scalable APIs, DB sharding
+Performance: <500ms latency for dashboard
+Durability: 5 years logs retention
+Consistency: Eventual (write-heavy regions)
+Maintainability: Modular microservices
+Security: JWT, OAuth2, RBAC, IP allowlists
 
 ## Component Descriptions
 - **Backend** – Node/Express server exposing REST endpoints and updating JSON
@@ -52,6 +74,10 @@ devices.
 - Activity logs enable auditing of policy changes and tower registrations.
 - Policies applied to carriers propagate to their towers ensuring consistency.
 - Input validation on the server returns proper status codes for missing data.
+Imporovements:
+DDoS: Rate-limiting at CDN, API Gateway
+Redundancy: Active-active DB clusters + replication
+Monitoring: Prometheus, Grafana, ELK stack for logs
 
 ## Offline & Accessibility Notes
 - The frontend is configured as a PWA so assets and API responses are cached via
