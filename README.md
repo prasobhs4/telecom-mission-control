@@ -43,6 +43,13 @@ For an architectural overview see [docs/SYSTEM_DESIGN.md](docs/SYSTEM_DESIGN.md)
    ```bash
    cd frontend && npm run build
    ```
+5.Users to try
+For testing or login purposes, users should follow one of the below formats based on their carrier:
+
+username@att.com
+username@verizon.com
+username@tmobile.com
+username@admin.com
 
 Log in with any email. The domain before `.com` determines the carrier (e.g. `user@att.example.com`).
 
