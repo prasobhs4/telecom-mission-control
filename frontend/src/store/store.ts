@@ -5,6 +5,7 @@ import towerReducer from "./towers/towerReducer";
 import deviceReducer from "./device/deviceReducer";
 import policyReducer from "./policy/policyReducer";
 import logReducer from "./userlogs/logReducer";
+import premiumReducer from "./premium/premiumReducer";
 
 export const store = configureStore({
   reducer: {
@@ -14,6 +15,7 @@ export const store = configureStore({
     device: deviceReducer,
     policy: policyReducer,
     logs: logReducer,
+    premium: premiumReducer,
   },
 });
 
