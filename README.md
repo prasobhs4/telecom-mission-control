@@ -31,7 +31,7 @@ For an architectural overview see [docs/SYSTEM_DESIGN.md](docs/SYSTEM_DESIGN.md)
    ```bash
    npm install
    cd backend && npm install
-   cd ../frontend && npm install
+   cd ../frontend && npm install --legacy-peer-deps
    ```
 2. Copy `.env.example` to `.env` and update any values if required.
 3. Start the development environment (runs server and client concurrently):
